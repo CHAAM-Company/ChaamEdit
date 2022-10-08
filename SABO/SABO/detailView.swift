@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct detailView: View {
+struct DetailView: View {
     var body: some View {
         VStack{
             Image("test")
@@ -26,8 +26,8 @@ struct detailView: View {
     }
 }
 
-struct detailView_Previews: PreviewProvider {
+struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        detailView()
+        DetailView()
     }
 }

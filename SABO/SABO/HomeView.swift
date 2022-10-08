@@ -7,13 +7,18 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     @State private var searchText: String = ""
     
     var body: some View {
         NavigationView {
             List {
-                Text("test")
+                ForEach(listArray, id:\.self) { item in
+                        VStack {
+                            Text("\(item.title)")
+                            Text("\(item.definition)")
+                        }
+                }
             }
             .searchable(text: $searchText)
             .navigationTitle("사보")
@@ -21,8 +26,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
