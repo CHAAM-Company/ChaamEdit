@@ -14,10 +14,16 @@ struct HomeView: View {
         NavigationView {
             List {
                 ForEach(listArray, id:\.self) { item in
-                        VStack {
+                    VStack {
+                        HStack{
                             Text("\(item.title)")
-                            Text("\(item.definition)")
+                            Spacer()
                         }
+                        HStack{
+                            Text("\(item.definition)")
+                            Spacer()
+                        }
+                    }
                 }
             }
             .searchable(text: $searchText)
