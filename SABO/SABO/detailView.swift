@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DetailView: View {
+    var item: SABAModel
+    
     var body: some View {
         VStack{
             Image("test")
@@ -15,19 +17,25 @@ struct DetailView: View {
                 .scaledToFit()
                 .cornerRadius(20)
                 .padding()
-            Text("채도")
+            Text("\(item.title)")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.bottom)
-            Text("반갑다반갑다반갑다반갑다반갑다반갑다반갑다반갑다반갑다반갑다반갑다반갑다반갑다반갑다반갑다반갑다반갑다반갑다반갑다반갑다")
-                .padding(.horizontal)
-            Spacer()
+            VStack(alignment: .leading) {
+                Text("\(item.definition)")
+                    .padding([.horizontal, .bottom])
+                Text("\(item.feature)")
+                    .padding([.horizontal, .bottom])
+                Text("\(item.quote)")
+                    .padding([.horizontal, .bottom])
+                Spacer()
+            }
         }
     }
 }
-
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView()
-    }
-}
+//
+//struct DetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DetailView()
+//    }
+//}
