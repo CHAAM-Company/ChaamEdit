@@ -30,7 +30,7 @@ struct GalleryCell: View {
                     )
                         .frame(height: 45.0)
                     
-                    HStack {
+                    HStack() {
                         Image(uiImage: userImage)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
@@ -39,6 +39,9 @@ struct GalleryCell: View {
                         
                         Text(title)
                             .font(.system(size: 12.0, weight: .bold))
+                            .lineLimit(1)
+
+                        Spacer()
                     }
                 }
             }
@@ -52,7 +55,7 @@ struct GalleryCell: View {
 struct GalleryCell_Previews: PreviewProvider {
     static var previews: some View {
         GalleryCell(
-            title: .constant("어쩌고 저쩌고임"),
+            title: .constant("커리가 Async발표할 때"),
             image: .constant(UIImage(named: "DummyGalleryImage") ?? UIImage()),
             userImage: .constant(UIImage(named: "DummyProfileImage") ?? UIImage()),
             cardID: .constant("")
