@@ -12,30 +12,37 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(listArray, id:\.self) { item in
-                    NavigationLink(destination: DetailView(item: item)) {
-                        HStack {
-                            Image(uiImage: item.icon ?? UIImage())
-                            VStack {
-                                HStack{
-                                    Text("\(item.title)")
-                                        .font(.system(size: 22))
-                                    Spacer()
-                                }
-                                HStack{
-                                    Text("\(item.definition)")
-                                        .font(.system(size: 16))
-                                        .foregroundColor(.gray)
-                                    Spacer()
+            VStack{
+                HStack{
+                    Text("사진편집 기능을\n알고싶다면?")
+                        .font(.system(size: 38))
+                        .fontWeight(.bold)
+                        .padding(.leading)
+                    Spacer()
+                }
+                List {
+                    ForEach(listArray, id:\.self) { item in
+                        NavigationLink(destination: DetailView(item: item)) {
+                            HStack {
+                                Image(uiImage: item.icon ?? UIImage())
+                                VStack {
+                                    HStack{
+                                        Text("\(item.title)")
+                                            .font(.system(size: 22))
+                                        Spacer()
+                                    }
+                                    HStack{
+                                        Text("\(item.definition)")
+                                            .font(.system(size: 16))
+                                            .foregroundColor(.gray)
+                                        Spacer()
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-            .searchable(text: $searchText)
-            .navigationTitle("사보")
         }
     }
 }
