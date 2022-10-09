@@ -56,30 +56,46 @@ struct EditingView: View {
             }
             
             if editingExposure || editingContrast || editingSaturation || editingTemperature {
-                Button {
-                    editingExposure = false
-                    editingContrast = false
-                    editingTemperature = false
-                    editingSaturation = false
+                HStack {
+                    Button {
+                        editingExposure = false
+                        editingContrast = false
+                        editingTemperature = false
+                        editingSaturation = false
+                        
+                        exposureValue = 0
+                        contrastValue = 0
+                        temperatureValue = 0
+                        saturationValue = 0
+                        
+                        editedSetting = ""
+                    } label: {
+                        Text("취소")
+                    }
                     
-                    exposureValue = 0
-                    contrastValue = 0
-                    temperatureValue = 0
-                    saturationValue = 0
-                    
-                    editedSetting = ""
-                } label: {
-                    Text("취소")
+                    Button {
+                        editingExposure = false
+                        editingContrast = false
+                        editingTemperature = false
+                        editingSaturation = false
+                        
+                    } label: {
+                        Text("입력완료")
+                    }
                 }
+            }
+            
+            HStack {
+                Spacer()
                 
                 Button {
-                    editingExposure = false
-                    editingContrast = false
-                    editingTemperature = false
-                    editingSaturation = false
+                    // 등록하기 기능
+                    
                 } label: {
-                    Text("입력완료")
+                    Text("등록하기")
+                        .bold()
                 }
+                .padding()
             }
         }
     }
