@@ -12,7 +12,7 @@ struct DetailView: View {
     
     var body: some View {
         VStack{
-            Image("test")
+            Image(uiImage: item.image ?? UIImage())
                 .resizable()
                 .scaledToFit()
                 .cornerRadius(20)
