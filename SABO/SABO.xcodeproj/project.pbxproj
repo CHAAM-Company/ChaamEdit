@@ -12,6 +12,7 @@
 		16AE96A828F264930074D44B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A728F264930074D44B /* FirebaseFirestore */; };
 		16AE96AA28F264930074D44B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A928F264930074D44B /* FirebaseStorage */; };
 		5525613228F26AA600AD350D /* MultiGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525613128F26AA600AD350D /* MultiGalleryView.swift */; };
+		5525613428F272CC00AD350D /* MultiGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525613328F272CC00AD350D /* MultiGalleryCell.swift */; };
 		A378595228F1945100414244 /* SABOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595128F1945100414244 /* SABOApp.swift */; };
 		A378595428F1945100414244 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595328F1945100414244 /* HomeView.swift */; };
 		A378595628F1945200414244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A378595528F1945200414244 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		16AE96A228F264000074D44B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5525613128F26AA600AD350D /* MultiGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiGalleryView.swift; sourceTree = "<group>"; };
+		5525613328F272CC00AD350D /* MultiGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiGalleryCell.swift; sourceTree = "<group>"; };
 		A378594E28F1945100414244 /* SABO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SABO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A378595128F1945100414244 /* SABOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SABOApp.swift; sourceTree = "<group>"; };
 		A378595328F1945100414244 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				A3EB881F28F259C300DD965D /* DetailView.swift */,
 				A3EB882128F25A4E00DD965D /* MainView.swift */,
 				5525613128F26AA600AD350D /* MultiGalleryView.swift */,
+				5525613328F272CC00AD350D /* MultiGalleryCell.swift */,
 				A378595528F1945200414244 /* Assets.xcassets */,
 				16AE96A228F264000074D44B /* GoogleService-Info.plist */,
 				A378595728F1945200414244 /* Preview Content */,
@@ -172,6 +175,7 @@
 				A378595228F1945100414244 /* SABOApp.swift in Sources */,
 				5525613228F26AA600AD350D /* MultiGalleryView.swift in Sources */,
 				A3EB882228F25A4E00DD965D /* MainView.swift in Sources */,
+				5525613428F272CC00AD350D /* MultiGalleryCell.swift in Sources */,
 				A385CBF928F19DED00B289C6 /* SABOModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
