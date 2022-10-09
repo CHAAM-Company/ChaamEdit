@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct UserDetailView: View {
+    let myName: String
+    let myJob: String
+    
     var body: some View {
         VStack(alignment: .leading) {
             //MARK: Binder
-            Text("Black__Raven")
+            Text(myName)
                 .font(.system(size:24))
                 .fontWeight(.semibold)
                 .truncationMode(.tail)
                 .padding(2)
-            Text("크리에이터")
+            Text(myJob)
                 .foregroundColor(.gray)
                 .truncationMode(.tail)
             
@@ -27,6 +30,6 @@ struct UserDetailView: View {
 
 struct UserDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        UserDetailView()
+        UserDetailView(myName: "", myJob: "")
     }
 }

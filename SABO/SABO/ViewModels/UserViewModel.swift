@@ -37,6 +37,7 @@ class UserViewModel: ObservableObject {
                             description: data!["description"] as? String ?? "",
                             profileImageUrl: data!["profileImageUrl"] as? String ?? ""
                         )
+                        self.retrieveProfileImage()
                     }
                 } else {
                     action()
@@ -86,7 +87,8 @@ class UserViewModel: ObservableObject {
     }
     
     // 프로필 이미지 다운로드
-    func retrieveProfileImage(user: User) {
+    func retrieveProfileImage() {
+        guard let user = self.user else { return }
         guard let path = user.profileImageUrl else { return }
         
         let storageRef = Storage.storage().reference()

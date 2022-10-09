@@ -29,8 +29,11 @@ struct MainView: View {
                             Image("grid")
                         }
                         .environmentObject(cardVM)
-                    Text("person")
-                    
+                    UserProfileView(
+                        myProfileImage: userVM.userProfileImage ?? UIImage(named: "grid")!,
+                        myName: userVM.user?.name ?? "",
+                        myJob: userVM.user?.description ?? ""
+                    )
                         .tabItem {
                             Image(systemName: "person.circle.fill")
                         }

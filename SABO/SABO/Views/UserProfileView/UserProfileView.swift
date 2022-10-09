@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct UserProfileView: View {
+    let myProfileImage: UIImage
+    let myName: String
+    let myJob: String
+    
     var body: some View {
         VStack() {
-            UserInformationView()
+            UserInformationView(myProfileImage: myProfileImage,myName: myName, myJob: myJob)
             UserPostGalleryView()
         }.padding(.top)
     }
@@ -18,6 +22,6 @@ struct UserProfileView: View {
 
 struct UserProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        UserProfileView()
+        UserProfileView(myProfileImage: UIImage(named: "grid")!, myName: "", myJob: "")
     }
 }
