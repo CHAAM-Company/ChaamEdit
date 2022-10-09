@@ -55,6 +55,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(.constant(false))
+        LoginView(isSignIn: .constant(false))
     }
 }
