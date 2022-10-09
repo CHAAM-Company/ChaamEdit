@@ -50,8 +50,10 @@ struct RegisterView: View {
                 
                 
             }
-        } .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+        }
+        .textFieldStyle(RoundedBorderTextFieldStyle())
+        .padding()
+        .interactiveDismissDisabled(true)
     }
 }
 
