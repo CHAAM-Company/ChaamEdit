@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A30A15B528F272680056B3E3 /* SABO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SABO.entitlements; sourceTree = "<group>"; };
 		A378594E28F1945100414244 /* SABO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SABO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A378595128F1945100414244 /* SABOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SABOApp.swift; sourceTree = "<group>"; };
 		A378595328F1945100414244 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		A378595028F1945100414244 /* SABO */ = {
 			isa = PBXGroup;
 			children = (
+				A30A15B528F272680056B3E3 /* SABO.entitlements */,
 				A378595128F1945100414244 /* SABOApp.swift */,
 				A385CBF828F19DED00B289C6 /* SABOModel.swift */,
 				A378595328F1945100414244 /* HomeView.swift */,
@@ -276,10 +278,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = SABO/SABO.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SABO/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UY9DAXUW36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -307,10 +311,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = SABO/SABO.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SABO/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UY9DAXUW36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
