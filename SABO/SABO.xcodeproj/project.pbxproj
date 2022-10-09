@@ -12,6 +12,22 @@
 		3248E25A28F298E600820404 /* contrast.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3248E25628F298E600820404 /* contrast.mp4 */; };
 		3248E25C28F298E600820404 /* whiteBlalance.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3248E25828F298E600820404 /* whiteBlalance.mp4 */; };
 		3248E25E28F2A62A00820404 /* saturation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3248E25D28F2A62A00820404 /* saturation.mp4 */; };
+		1666776828F2793D00323C22 /* AppleLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666776728F2793D00323C22 /* AppleLoginButton.swift */; };
+		1666776A28F27D9500323C22 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666776928F27D9500323C22 /* UserModel.swift */; };
+		1666776C28F27E2500323C22 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666776B28F27E2500323C22 /* UserViewModel.swift */; };
+		1666777028F2BE7000323C22 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666776F28F2BE7000323C22 /* RegisterView.swift */; };
+		16AE96A328F264000074D44B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16AE96A228F264000074D44B /* GoogleService-Info.plist */; };
+		16AE96A628F264930074D44B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A528F264930074D44B /* FirebaseAuth */; };
+		16AE96A828F264930074D44B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A728F264930074D44B /* FirebaseFirestore */; };
+		16AE96AA28F264930074D44B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A928F264930074D44B /* FirebaseStorage */; };
+		16AE96AD28F26EBA0074D44B /* AppleAuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AE96AC28F26EBA0074D44B /* AppleAuthCoordinator.swift */; };
+		3276D02328F265B7004F7680 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3276D02228F265B7004F7680 /* LoginView.swift */; };
+		378D4DEA28F273230094F277 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D4DE928F273230094F277 /* CardViewModel.swift */; };
+		378D4DEE28F276810094F277 /* CardCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D4DED28F276810094F277 /* CardCellModel.swift */; };
+		5525613228F26AA600AD350D /* MultiGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525613128F26AA600AD350D /* MultiGalleryView.swift */; };
+		5525613428F272CC00AD350D /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525613328F272CC00AD350D /* GalleryCell.swift */; };
+		5525613628F27B0200AD350D /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525613528F27B0200AD350D /* Color+.swift */; };
+		5525613828F29E0A00AD350D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525613728F29E0A00AD350D /* SearchBar.swift */; };
 		A378595228F1945100414244 /* SABOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595128F1945100414244 /* SABOApp.swift */; };
 		A378595428F1945100414244 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595328F1945100414244 /* HomeView.swift */; };
 		A378595628F1945200414244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A378595528F1945200414244 /* Assets.xcassets */; };
@@ -27,6 +43,20 @@
 		3248E25628F298E600820404 /* contrast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = contrast.mp4; sourceTree = "<group>"; };
 		3248E25828F298E600820404 /* whiteBlalance.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = whiteBlalance.mp4; sourceTree = "<group>"; };
 		3248E25D28F2A62A00820404 /* saturation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = saturation.mp4; sourceTree = "<group>"; };
+		1666776728F2793D00323C22 /* AppleLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginButton.swift; sourceTree = "<group>"; };
+		1666776928F27D9500323C22 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1666776B28F27E2500323C22 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		1666776F28F2BE7000323C22 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		16AE96A228F264000074D44B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		16AE96AC28F26EBA0074D44B /* AppleAuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthCoordinator.swift; sourceTree = "<group>"; };
+		3276D02228F265B7004F7680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		378D4DE928F273230094F277 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		378D4DED28F276810094F277 /* CardCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellModel.swift; sourceTree = "<group>"; };
+		5525613128F26AA600AD350D /* MultiGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiGalleryView.swift; sourceTree = "<group>"; };
+		5525613328F272CC00AD350D /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		5525613528F27B0200AD350D /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		5525613728F29E0A00AD350D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		A30A15B528F272680056B3E3 /* SABO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SABO.entitlements; sourceTree = "<group>"; };
 		A378594E28F1945100414244 /* SABO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SABO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A378595128F1945100414244 /* SABOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SABOApp.swift; sourceTree = "<group>"; };
 		A378595328F1945100414244 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -42,6 +72,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AE96A628F264930074D44B /* FirebaseAuth in Frameworks */,
+				16AE96A828F264930074D44B /* FirebaseFirestore in Frameworks */,
+				16AE96AA28F264930074D44B /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +90,41 @@
 				3248E25D28F2A62A00820404 /* saturation.mp4 */,
 			);
 			path = Videos;
+		16AE96AF28F276A40074D44B /* Authentications */ = {
+			isa = PBXGroup;
+			children = (
+				3276D02228F265B7004F7680 /* LoginView.swift */,
+				1666776F28F2BE7000323C22 /* RegisterView.swift */,
+				1666776728F2793D00323C22 /* AppleLoginButton.swift */,
+				16AE96AC28F26EBA0074D44B /* AppleAuthCoordinator.swift */,
+			);
+			path = Authentications;
+			sourceTree = "<group>";
+		};
+		378D4DE228F269590094F277 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				16AE96AF28F276A40074D44B /* Authentications */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		378D4DE328F2695E0094F277 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1666776928F27D9500323C22 /* UserModel.swift */,
+				378D4DED28F276810094F277 /* CardCellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		378D4DE428F269720094F277 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				378D4DE928F273230094F277 /* CardViewModel.swift */,
+				1666776B28F27E2500323C22 /* UserViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		A378594528F1945100414244 = {
@@ -79,13 +147,22 @@
 			isa = PBXGroup;
 			children = (
 				3248E25428F298D100820404 /* Videos */,
+				A30A15B528F272680056B3E3 /* SABO.entitlements */,
+				378D4DE228F269590094F277 /* Views */,
+				378D4DE428F269720094F277 /* ViewModels */,
+				378D4DE328F2695E0094F277 /* Models */,
 				A378595128F1945100414244 /* SABOApp.swift */,
 				A385CBF828F19DED00B289C6 /* SABOModel.swift */,
 				A378595328F1945100414244 /* HomeView.swift */,
+				5525613528F27B0200AD350D /* Color+.swift */,
 				A3EB881F28F259C300DD965D /* DetailView.swift */,
 				A3EB882128F25A4E00DD965D /* MainView.swift */,
 				3248E25228F2989D00820404 /* LoopingPlayer.swift */,
+				5525613128F26AA600AD350D /* MultiGalleryView.swift */,
+				5525613328F272CC00AD350D /* GalleryCell.swift */,
+				5525613728F29E0A00AD350D /* SearchBar.swift */,
 				A378595528F1945200414244 /* Assets.xcassets */,
+				16AE96A228F264000074D44B /* GoogleService-Info.plist */,
 				A378595728F1945200414244 /* Preview Content */,
 			);
 			path = SABO;
@@ -115,6 +192,11 @@
 			dependencies = (
 			);
 			name = SABO;
+			packageProductDependencies = (
+				16AE96A528F264930074D44B /* FirebaseAuth */,
+				16AE96A728F264930074D44B /* FirebaseFirestore */,
+				16AE96A928F264930074D44B /* FirebaseStorage */,
+			);
 			productName = SABO;
 			productReference = A378594E28F1945100414244 /* SABO.app */;
 			productType = "com.apple.product-type.application";
@@ -143,6 +225,9 @@
 				Base,
 			);
 			mainGroup = A378594528F1945100414244;
+			packageReferences = (
+				16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A378594F28F1945100414244 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -163,6 +248,7 @@
 				A378595628F1945200414244 /* Assets.xcassets in Resources */,
 				3248E25928F298E600820404 /* exposure.mp4 in Resources */,
 				3248E25C28F298E600820404 /* whiteBlalance.mp4 in Resources */,
+				16AE96A328F264000074D44B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,12 +259,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3276D02328F265B7004F7680 /* LoginView.swift in Sources */,
+				1666776C28F27E2500323C22 /* UserViewModel.swift in Sources */,
 				A378595428F1945100414244 /* HomeView.swift in Sources */,
+				378D4DEE28F276810094F277 /* CardCellModel.swift in Sources */,
+				5525613628F27B0200AD350D /* Color+.swift in Sources */,
 				A3EB882028F259C300DD965D /* DetailView.swift in Sources */,
 				A378595228F1945100414244 /* SABOApp.swift in Sources */,
+				5525613228F26AA600AD350D /* MultiGalleryView.swift in Sources */,
+				1666777028F2BE7000323C22 /* RegisterView.swift in Sources */,
+				5525613828F29E0A00AD350D /* SearchBar.swift in Sources */,
 				A3EB882228F25A4E00DD965D /* MainView.swift in Sources */,
+				378D4DEA28F273230094F277 /* CardViewModel.swift in Sources */,
+				5525613428F272CC00AD350D /* GalleryCell.swift in Sources */,
 				A385CBF928F19DED00B289C6 /* SABOModel.swift in Sources */,
 				3248E25328F2989D00820404 /* LoopingPlayer.swift in Sources */,
+				1666776828F2793D00323C22 /* AppleLoginButton.swift in Sources */,
+				16AE96AD28F26EBA0074D44B /* AppleAuthCoordinator.swift in Sources */,
+				1666776A28F27D9500323C22 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,11 +402,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SABO/SABO.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SABO/Preview Content\"";
 				DEVELOPMENT_TEAM = UY9DAXUW36;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = UY9DAXUW36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -328,6 +431,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SABO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -339,11 +443,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SABO/SABO.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SABO/Preview Content\"";
 				DEVELOPMENT_TEAM = UY9DAXUW36;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = UY9DAXUW36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -363,6 +472,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SABO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -391,6 +501,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16AE96A528F264930074D44B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		16AE96A728F264930074D44B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		16AE96A928F264930074D44B /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A378594628F1945100414244 /* Project object */;
 }
