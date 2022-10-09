@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		325B518B28F19C0500D45568 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B518A28F19C0500D45568 /* DetailView.swift */; };
 		A378595228F1945100414244 /* SABOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595128F1945100414244 /* SABOApp.swift */; };
 		A378595428F1945100414244 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595328F1945100414244 /* HomeView.swift */; };
 		A378595628F1945200414244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A378595528F1945200414244 /* Assets.xcassets */; };
 		A378595928F1945200414244 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A378595828F1945200414244 /* Preview Assets.xcassets */; };
 		A385CBF928F19DED00B289C6 /* SABOModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A385CBF828F19DED00B289C6 /* SABOModel.swift */; };
+		A3EB882028F259C300DD965D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EB881F28F259C300DD965D /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		325B518A28F19C0500D45568 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		A378594E28F1945100414244 /* SABO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SABO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A378595128F1945100414244 /* SABOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SABOApp.swift; sourceTree = "<group>"; };
 		A378595328F1945100414244 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A378595528F1945200414244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A378595828F1945200414244 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A385CBF828F19DED00B289C6 /* SABOModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SABOModel.swift; sourceTree = "<group>"; };
+		A3EB881F28F259C300DD965D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 				A378595128F1945100414244 /* SABOApp.swift */,
 				A385CBF828F19DED00B289C6 /* SABOModel.swift */,
 				A378595328F1945100414244 /* HomeView.swift */,
-				325B518A28F19C0500D45568 /* DetailView.swift */,
+				A3EB881F28F259C300DD965D /* DetailView.swift */,
 				A378595528F1945200414244 /* Assets.xcassets */,
 				A378595728F1945200414244 /* Preview Content */,
 			);
@@ -143,8 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				325B518B28F19C0500D45568 /* DetailView.swift in Sources */,
 				A378595428F1945100414244 /* HomeView.swift in Sources */,
+				A3EB882028F259C300DD965D /* DetailView.swift in Sources */,
 				A378595228F1945100414244 /* SABOApp.swift in Sources */,
 				A385CBF928F19DED00B289C6 /* SABOModel.swift in Sources */,
 			);

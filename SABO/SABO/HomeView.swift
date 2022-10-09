@@ -15,17 +15,20 @@ struct HomeView: View {
             List {
                 ForEach(listArray, id:\.self) { item in
                     NavigationLink(destination: DetailView(item: item)) {
-                        VStack {
-                            HStack{
-                                Text("\(item.title)")
-                                    .font(.system(size: 22))
-                                Spacer()
-                            }
-                            HStack{
-                                Text("\(item.definition)")
-                                    .font(.system(size: 16))
-                                    .foregroundColor(.gray)
-                                Spacer()
+                        HStack {
+                            Image(uiImage: item.icon ?? UIImage())
+                            VStack {
+                                HStack{
+                                    Text("\(item.title)")
+                                        .font(.system(size: 22))
+                                    Spacer()
+                                }
+                                HStack{
+                                    Text("\(item.definition)")
+                                        .font(.system(size: 16))
+                                        .foregroundColor(.gray)
+                                    Spacer()
+                                }
                             }
                         }
                     }
