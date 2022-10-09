@@ -9,12 +9,15 @@ import SwiftUI
 
 struct UserProfileView: View {
     @EnvironmentObject var userVM: UserViewModel
+    @EnvironmentObject var cardVM: CardViewModel
     
     var body: some View {
         VStack() {
             UserInformationView()
                 .environmentObject(userVM)
             UserPostGalleryView()
+                .environmentObject(userVM)
+                .environmentObject(cardVM)
         }
         .padding(.top)
     }
