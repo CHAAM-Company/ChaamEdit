@@ -72,7 +72,7 @@ class UserViewModel: ObservableObject {
         
         let storageRef = Storage.storage().reference()
         
-        let imageData = image.jpegData(compressionQuality: 0.8)
+        let imageData = image.jpegData(compressionQuality: 0.2)
         
         guard let data = imageData else { return }
         
