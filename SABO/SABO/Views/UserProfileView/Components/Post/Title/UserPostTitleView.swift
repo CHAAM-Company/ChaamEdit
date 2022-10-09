@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct UserPostTitleView: View {
+    @EnvironmentObject var cardVM: CardViewModel
+    @EnvironmentObject var userVM: UserViewModel
+    
     @State var newImg: UIImage = UIImage()
     @State var isPickerPressed = false
     @State var isChoosen = false
@@ -33,6 +36,8 @@ struct UserPostTitleView: View {
                 }
                 .sheet(isPresented: $isChoosen) {
                     EditingView(image: $newImg)
+                        .environmentObject(cardVM)
+                        .environmentObject(userVM)
                 }
         }
         .padding(EdgeInsets(top: 0, leading: 27, bottom: 0, trailing: 27))

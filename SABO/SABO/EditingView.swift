@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct EditingView: View {
+    @Environment(\.dismiss) var dismiss
+    
+    @EnvironmentObject var cardVM: CardViewModel
+    @EnvironmentObject var userVM: UserViewModel
+    
     @State var editingExposure: Bool = false
     @State var editingContrast: Bool = false
     @State var editingTemperature: Bool = false
@@ -90,7 +95,10 @@ struct EditingView: View {
                 
                 Button {
                     // 등록하기 기능
-                    
+                    cardVM.addCardData(title: "성공적인 색 보정 인가요?", originImage: image, fixedImage: image,
+                                       calibrationValues: [Int(exposureValue), Int(contrastValue), Int(temperatureValue), Int(saturationValue)],
+                                       userId: userVM.user?.id ?? "", userProfileImageUrl: userVM.user?.profileImageUrl ?? "")
+                    dismiss()
                 } label: {
                     Text("등록하기")
                         .bold()

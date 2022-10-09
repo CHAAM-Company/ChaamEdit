@@ -16,7 +16,7 @@ struct CardCell: Identifiable, Hashable {
     var fixedImageUrl: String
     var resizedOrignImageUrl: String
     var resizedFixedImageUrl: String
-    var calibrationValue: [Double]
+    var calibrationValue: [Int]
     var creatorId: String
     var creatorProfileImageUrl: String
 }

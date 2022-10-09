@@ -21,7 +21,7 @@ class CardViewModel: ObservableObject {
     
     // MARK: - 카드 Create
     func addCardData(title: String, originImage: UIImage, fixedImage: UIImage,
-                     calibrationValues: [Double], userId: String, userProfileImageUrl: String) {
+                     calibrationValues: [Int], userId: String, userProfileImageUrl: String) {
         let cardId = UUID().uuidString
         
         // 데이터 저장
@@ -91,7 +91,7 @@ class CardViewModel: ObservableObject {
                                 fixedImageUrl: data["fixedImageUrl"] as? String ?? "",
                                 resizedOrignImageUrl: data["resizedOriginImageUrl"] as? String ?? "",
                                 resizedFixedImageUrl: data["resizedFixedImageUrl"] as? String ?? "",
-                                calibrationValue: data["calibrationValues"] as? [Double] ?? [],
+                                calibrationValue: data["calibrationValues"] as? [Int] ?? [],
                                 creatorId: data["creatorId"] as? String ?? "",
                                 creatorProfileImageUrl: data["creatorProfileImageUrl"] as? String ?? ""
                             )
@@ -128,7 +128,7 @@ class CardViewModel: ObservableObject {
                                 fixedImageUrl: data["fixedImageUrl"] as? String ?? "",
                                 resizedOrignImageUrl: data["resizedOriginImageUrl"] as? String ?? "",
                                 resizedFixedImageUrl: data["resizedFixedImageUrl"] as? String ?? "",
-                                calibrationValue: data["calibrationValues"] as? [Double] ?? [],
+                                calibrationValue: data["calibrationValues"] as? [Int] ?? [],
                                 creatorId: data["creatorId"] as? String ?? "",
                                 creatorProfileImageUrl: data["creatorProfileImageUrl"] as? String ?? ""
                             )

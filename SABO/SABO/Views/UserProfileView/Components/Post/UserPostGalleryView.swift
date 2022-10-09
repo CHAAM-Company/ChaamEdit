@@ -20,6 +20,8 @@ struct UserPostGalleryView: View {
     var body: some View {
         VStack {
             UserPostTitleView()
+                .environmentObject(cardVM)
+                .environmentObject(userVM)
             NavigationView {
                   ScrollView {
                       VStack(alignment: .leading) {
