@@ -32,6 +32,14 @@ struct MainView: View {
                         }
                 }
                 .accentColor(Color("TabColor"))
+                .onAppear {
+                    if let user = firebaseAuth.currentUser {
+                        userVM.getUserData(uid: user.uid)
+                        if userVM.user == nil {
+                            // TODO: 회원 정보 추가 모달창
+                        }
+                    }
+                }
             } else {
                 LoginView(isSignIn: $isSignIn)
             }
@@ -39,7 +47,6 @@ struct MainView: View {
         .onAppear {
             if firebaseAuth.currentUser != nil {
                 isSignIn = true
-                // userVM.getUserData(uid: firebaseAuth.currentUser!.uid)
             } else {
                 isSignIn = false
             }
