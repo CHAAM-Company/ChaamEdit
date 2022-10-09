@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct UserAvatarView: View {
     let myProfileImage: UIImage
+    @State var newImg: UIImage?
+    @State var isPickerPressed = false
     
     var body: some View {
         
@@ -30,8 +33,13 @@ struct UserAvatarView: View {
                     .clipShape(Circle())
                     .offset(x:35, y:-35)
                     .frame(width: 30, height: 30)
-                
+                    .onTapGesture {
+                        isPickerPressed = true
+                    }
             )
+            .fullScreenCover(isPresented: $isPickerPressed) {
+                PhotoPickerView(image: $newImg)
+            }
         
     }
 }
