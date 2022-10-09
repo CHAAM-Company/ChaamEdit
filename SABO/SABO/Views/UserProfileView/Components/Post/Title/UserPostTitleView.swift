@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct UserPostTitleView: View {
+    @State var newImg: UIImage = UIImage()
+    @State var isPickerPressed = false
+    @State var isChoosen = false
+    
     var body: some View {
         HStack {
             Text("Posts")
@@ -18,6 +22,18 @@ struct UserPostTitleView: View {
             Image(systemName: "plus.circle.fill")
                 .foregroundColor(Color("TabColor"))
                 .font(.system(size:32))
+                .onTapGesture {
+                    isPickerPressed = true
+                }
+                .fullScreenCover(isPresented: $isPickerPressed) {
+                    PhotoPickerView(selectedImage: $newImg)
+                        .onDisappear {
+                            isChoosen = true
+                        }
+                }
+                .sheet(isPresented: $isChoosen) {
+                    EditingView(image: $newImg)
+                }
         }
         .padding(EdgeInsets(top: 0, leading: 27, bottom: 0, trailing: 27))
     }

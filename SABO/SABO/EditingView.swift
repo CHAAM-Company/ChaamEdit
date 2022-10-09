@@ -21,7 +21,7 @@ struct EditingView: View {
     @State var editedSetting = ""
     
     
-    var image: UIImage
+    @Binding var image: UIImage
     let width = UIScreen.main.bounds.width
     
     var body: some View {
@@ -85,8 +85,8 @@ struct EditingView: View {
     }
 }
 
-struct EditingView_Previews: PreviewProvider {
-    static var previews: some View {
-        EditingView(image: UIImage(named: "appIcon") ?? UIImage())
-    }
-}
+//struct EditingView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EditingView(image: UIImage(named: "appIcon") ?? UIImage())
+//    }
+//}
