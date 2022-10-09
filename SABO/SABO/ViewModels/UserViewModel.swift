@@ -25,7 +25,7 @@ class UserViewModel: ObservableObject {
     }
     
     // MARK: - 유저 정보 Read
-    func getUserData(uid: String) {
+    func getUserData(uid: String, action: @escaping ()-> Void) {
         db.collection("users").document(uid).addSnapshotListener { snapshot, error in
             if error == nil {
                 if let snapshot = snapshot, snapshot.exists {
@@ -39,7 +39,7 @@ class UserViewModel: ObservableObject {
                         )
                     }
                 } else {
-                    // TODO: 첫 로그인 일 때
+                    action()
                 }
             }
         }
@@ -49,7 +49,7 @@ class UserViewModel: ObservableObject {
     func updateUser(uid: String, info: [AnyHashable : Any]) {
         db.collection("users").document(uid).updateData(info) { error in
             if error == nil {
-                self.getUserData(uid: uid)
+                self.getUserData(uid: uid) {}
             }
         }
     }

@@ -10,6 +10,7 @@
 		1666776828F2793D00323C22 /* AppleLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666776728F2793D00323C22 /* AppleLoginButton.swift */; };
 		1666776A28F27D9500323C22 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666776928F27D9500323C22 /* UserModel.swift */; };
 		1666776C28F27E2500323C22 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666776B28F27E2500323C22 /* UserViewModel.swift */; };
+		1666777028F2BE7000323C22 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666776F28F2BE7000323C22 /* RegisterView.swift */; };
 		16AE96A328F264000074D44B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16AE96A228F264000074D44B /* GoogleService-Info.plist */; };
 		16AE96A628F264930074D44B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A528F264930074D44B /* FirebaseAuth */; };
 		16AE96A828F264930074D44B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A728F264930074D44B /* FirebaseFirestore */; };
@@ -35,6 +36,7 @@
 		1666776728F2793D00323C22 /* AppleLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginButton.swift; sourceTree = "<group>"; };
 		1666776928F27D9500323C22 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1666776B28F27E2500323C22 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		1666776F28F2BE7000323C22 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		16AE96A228F264000074D44B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		16AE96AC28F26EBA0074D44B /* AppleAuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthCoordinator.swift; sourceTree = "<group>"; };
 		3276D02228F265B7004F7680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				3276D02228F265B7004F7680 /* LoginView.swift */,
+				1666776F28F2BE7000323C22 /* RegisterView.swift */,
 				1666776728F2793D00323C22 /* AppleLoginButton.swift */,
 				16AE96AC28F26EBA0074D44B /* AppleAuthCoordinator.swift */,
 			);
@@ -239,6 +242,7 @@
 				A3EB882028F259C300DD965D /* DetailView.swift in Sources */,
 				A378595228F1945100414244 /* SABOApp.swift in Sources */,
 				5525613228F26AA600AD350D /* MultiGalleryView.swift in Sources */,
+				1666777028F2BE7000323C22 /* RegisterView.swift in Sources */,
 				5525613828F29E0A00AD350D /* SearchBar.swift in Sources */,
 				A3EB882228F25A4E00DD965D /* MainView.swift in Sources */,
 				378D4DEA28F273230094F277 /* CardViewModel.swift in Sources */,

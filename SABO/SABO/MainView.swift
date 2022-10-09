@@ -11,7 +11,8 @@ import FirebaseAuth
 struct MainView: View {
     let firebaseAuth = Auth.auth()
     @State var isSignIn = false
-    @ObservedObject var userVM = UserViewModel()
+    @State private var showModal = false
+    @StateObject var userVM = UserViewModel()
     
     var body: some View {
         ZStack {
@@ -34,11 +35,13 @@ struct MainView: View {
                 .accentColor(Color("TabColor"))
                 .onAppear {
                     if let user = firebaseAuth.currentUser {
-                        userVM.getUserData(uid: user.uid)
-                        if userVM.user == nil {
-                            // TODO: 회원 정보 추가 모달창
+                        userVM.getUserData(uid: user.uid) {
+                            showModal = true
                         }
                     }
+                }
+                .sheet(isPresented: $showModal) {
+                    RegisterView(userVM: userVM, userId: firebaseAuth.currentUser!.uid)
                 }
             } else {
                 LoginView(isSignIn: $isSignIn)
