@@ -43,6 +43,7 @@ struct GalleryCell: View {
                 }
             }
         }
+        .redacted(reason: [] == nil ? .placeholder : [])
         .frame(width: 160, height: 160)
         .cornerRadius(16.0)
     }
