@@ -11,8 +11,12 @@ import SwiftUI
 struct CardCell: Identifiable {
     var id: String
     var time: Int
-    var imageUrl: String
     var title: String
-    var profileImageUrl: String
+    var orginImageUrl: String
+    var fixedImageUrl: String
+    var resizedOrignImageUrl: String
+    var resizedFixedImageUrl: String
+    var calibrationValue: [Double]
     var creatorId: String
+    var creatorProfileImageUrl: String
 }
