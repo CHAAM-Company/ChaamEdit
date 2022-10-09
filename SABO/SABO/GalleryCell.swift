@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct GalleryCell: View {
-    @Binding var title: String
-    @Binding var image: UIImage
-    @Binding var userImage: UIImage
-    @Binding var cardID: String
+    var title: String
+    var image: UIImage
+    var userImage: UIImage
+    var cardID: String
     
     var body: some View {
         ZStack {
@@ -55,10 +55,10 @@ struct GalleryCell: View {
 struct GalleryCell_Previews: PreviewProvider {
     static var previews: some View {
         GalleryCell(
-            title: .constant("커리가 Async발표할 때"),
-            image: .constant(UIImage(named: "DummyGalleryImage") ?? UIImage()),
-            userImage: .constant(UIImage(named: "DummyProfileImage") ?? UIImage()),
-            cardID: .constant("")
+            title: "커리가 Async발표할 때",
+            image: UIImage(named: "DummyGalleryImage") ?? UIImage(),
+            userImage: UIImage(named: "DummyProfileImage") ?? UIImage(),
+            cardID: ""
         )
     }
 }
