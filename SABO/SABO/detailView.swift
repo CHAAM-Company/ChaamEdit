@@ -15,6 +15,7 @@ struct DetailView: View {
         ZStack {
             Color("BackgroundColor")
                 .ignoresSafeArea()
+            
             VStack {
                 LoopingPlayer(videoName: item.videoName)
                     .cornerRadius(16, corners: [.bottomLeft, .bottomRight])
@@ -29,49 +30,48 @@ struct DetailView: View {
                     Image(uiImage: item.icon ?? UIImage())
                     Spacer()
                 }
-                
-                VStack() {
-                    HStack {
-                        Text("정의")
-                            .foregroundColor(.gray)
-                            .padding(.horizontal)
-                        Spacer()
-                    }
-                    
-                    HStack {
-                        Text(item.definition)
-                            .padding(.all)
-                        Spacer()
-                    }
-                    .background(
-                        RoundedRectangle(cornerRadius: 16)
-                            .frame(width: UIScreen.main.bounds.width - 37)
-                            .foregroundColor(.white)
-                    )
-                    .padding(.horizontal)
-                    
-                    HStack {
-                        Text("특징")
-                            .foregroundColor(.gray)
-                            .padding(.horizontal)
-                        Spacer()
-                    }
-                    
-                    ScrollView() {
+                ScrollView() {
+                    VStack() {
+                        HStack {
+                            Text("정의")
+                                .foregroundColor(.gray)
+                                .padding(.horizontal)
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Text(item.definition)
+                                .padding(.all)
+                            Spacer()
+                        }
+                        .background(
+                            RoundedRectangle(cornerRadius: 16)
+                                .frame(width: UIScreen.main.bounds.width - 37)
+                                .foregroundColor(.white)
+                        )
+                        .padding(.horizontal)
+                        
+                        HStack {
+                            Text("특징")
+                                .foregroundColor(.gray)
+                                .padding(.horizontal)
+                            Spacer()
+                        }
+                        
                         HStack {
                             Text(item.feature)
                                 .padding(.all)
                             Spacer()
                         }
+                        .background(
+                            RoundedRectangle(cornerRadius: 16)
+                                .frame(width: UIScreen.main.bounds.width - 37)
+                                .foregroundColor(.white)
+                        )
+                        .padding(.horizontal)
                     }
-                    .background(
-                        RoundedRectangle(cornerRadius: 16)
-                            .frame(width: UIScreen.main.bounds.width - 37)
-                            .foregroundColor(.white)
-                    )
-                    .padding(.horizontal)
+                    Spacer()
                 }
-                Spacer()
             }
             
             HStack {
