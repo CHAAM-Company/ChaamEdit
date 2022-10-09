@@ -36,7 +36,7 @@ struct DetailView: View {
                     Spacer()
                 }
                 
-                VStack {
+                VStack() {
                     HStack {
                         Text("정의")
                             .foregroundColor(.gray)
@@ -44,16 +44,17 @@ struct DetailView: View {
                         Spacer()
                     }
                     
-                    RoundedRectangle(cornerRadius: 16)
-                        .foregroundColor(.white)
-                        .padding(.horizontal)
-                        .overlay {
-                            Text("\(item.definition)")
-                                .padding(.horizontal)
-                        }
-                        .frame(maxHeight: 100)
-                    
-                    Spacer()
+                    HStack {
+                        Text(item.definition)
+                            .padding(.all)
+                        Spacer()
+                    }
+                    .background(
+                        RoundedRectangle(cornerRadius: 16)
+                            .frame(width: UIScreen.main.bounds.width - 37)
+                            .foregroundColor(.white)
+                    )
+                    .padding(.horizontal)
                     
                     HStack {
                         Text("특징")
@@ -62,17 +63,23 @@ struct DetailView: View {
                         Spacer()
                     }
                     
-                    RoundedRectangle(cornerRadius: 16)
-                        .foregroundColor(.white)
-                        .padding(.horizontal)
-                        .overlay {
-                            Text("\(item.feature)")
-                                .padding(.horizontal)
-                                .padding(.horizontal)
+                    ScrollView() {
+                        HStack {
+                            Text(item.feature)
+                                .padding(.all)
+                            Spacer()
                         }
-                        .frame(maxHeight: 230)
+                    }
+                    .background(
+                        RoundedRectangle(cornerRadius: 16)
+                            .frame(width: UIScreen.main.bounds.width - 37)
+                            .foregroundColor(.white)
+                    )
+                    .padding(.horizontal)
                 }
+                Spacer()
             }
+            
             HStack {
                 VStack {
                     Button {
