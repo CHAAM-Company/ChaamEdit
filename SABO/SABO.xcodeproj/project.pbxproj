@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3276D02328F265B7004F7680 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3276D02228F265B7004F7680 /* LoginView.swift */; };
 		16AE96A328F264000074D44B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16AE96A228F264000074D44B /* GoogleService-Info.plist */; };
 		16AE96A628F264930074D44B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A528F264930074D44B /* FirebaseAuth */; };
 		16AE96A828F264930074D44B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A728F264930074D44B /* FirebaseFirestore */; };
 		16AE96AA28F264930074D44B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A928F264930074D44B /* FirebaseStorage */; };
 		16AE96AD28F26EBA0074D44B /* AppleAuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AE96AC28F26EBA0074D44B /* AppleAuthCoordinator.swift */; };
+		3276D02328F265B7004F7680 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3276D02228F265B7004F7680 /* LoginView.swift */; };
 		378D4DE628F26A070094F277 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D4DE528F26A070094F277 /* CardModel.swift */; };
 		378D4DE828F26CC30094F277 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D4DE728F26CC30094F277 /* CardViewModel.swift */; };
+		5525613D28F2AAB700AD350D /* BrightroomEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 5525613C28F2AAB700AD350D /* BrightroomEngine */; };
+		5525613F28F2AAB700AD350D /* BrightroomUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5525613E28F2AAB700AD350D /* BrightroomUI */; };
 		A378595228F1945100414244 /* SABOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595128F1945100414244 /* SABOApp.swift */; };
 		A378595428F1945100414244 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595328F1945100414244 /* HomeView.swift */; };
 		A378595628F1945200414244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A378595528F1945200414244 /* Assets.xcassets */; };
@@ -25,12 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A30A15B528F272680056B3E3 /* SABO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SABO.entitlements; sourceTree = "<group>"; };
-		3276D02228F265B7004F7680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		16AE96A228F264000074D44B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		16AE96AC28F26EBA0074D44B /* AppleAuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthCoordinator.swift; sourceTree = "<group>"; };
+		3276D02228F265B7004F7680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		378D4DE528F26A070094F277 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		378D4DE728F26CC30094F277 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		A30A15B528F272680056B3E3 /* SABO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SABO.entitlements; sourceTree = "<group>"; };
 		A378594E28F1945100414244 /* SABO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SABO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A378595128F1945100414244 /* SABOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SABOApp.swift; sourceTree = "<group>"; };
 		A378595328F1945100414244 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -48,7 +50,9 @@
 			files = (
 				16AE96A628F264930074D44B /* FirebaseAuth in Frameworks */,
 				16AE96A828F264930074D44B /* FirebaseFirestore in Frameworks */,
+				5525613F28F2AAB700AD350D /* BrightroomUI in Frameworks */,
 				16AE96AA28F264930074D44B /* FirebaseStorage in Frameworks */,
+				5525613D28F2AAB700AD350D /* BrightroomEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +147,8 @@
 				16AE96A528F264930074D44B /* FirebaseAuth */,
 				16AE96A728F264930074D44B /* FirebaseFirestore */,
 				16AE96A928F264930074D44B /* FirebaseStorage */,
+				5525613C28F2AAB700AD350D /* BrightroomEngine */,
+				5525613E28F2AAB700AD350D /* BrightroomUI */,
 			);
 			productName = SABO;
 			productReference = A378594E28F1945100414244 /* SABO.app */;
@@ -174,6 +180,7 @@
 			mainGroup = A378594528F1945100414244;
 			packageReferences = (
 				16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5525613B28F2AAB700AD350D /* XCRemoteSwiftPackageReference "Brightroom" */,
 			);
 			productRefGroup = A378594F28F1945100414244 /* Products */;
 			projectDirPath = "";
@@ -435,6 +442,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		5525613B28F2AAB700AD350D /* XCRemoteSwiftPackageReference "Brightroom" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/muukii/Brightroom.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -452,6 +467,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		5525613C28F2AAB700AD350D /* BrightroomEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5525613B28F2AAB700AD350D /* XCRemoteSwiftPackageReference "Brightroom" */;
+			productName = BrightroomEngine;
+		};
+		5525613E28F2AAB700AD350D /* BrightroomUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5525613B28F2AAB700AD350D /* XCRemoteSwiftPackageReference "Brightroom" */;
+			productName = BrightroomUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
