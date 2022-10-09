@@ -26,8 +26,8 @@ struct DetailView: View {
                     .padding([.horizontal, .bottom])
                 Text("\(item.feature)")
                     .padding([.horizontal, .bottom])
-                Text("\(item.quote)")
-                    .padding([.horizontal, .bottom])
+//                Text("\(item.quote)")
+//                    .padding([.horizontal, .bottom])
                 Spacer()
             }
         }
