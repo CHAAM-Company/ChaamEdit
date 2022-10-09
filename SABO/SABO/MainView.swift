@@ -19,10 +19,12 @@ struct MainView: View {
                     Image("grid")
                 }
             Text("person")
+            
                 .tabItem {
                     Image(systemName: "person.circle.fill")
                 }
         }
+        .accentColor(Color("TabColor"))
     }
 }
 
