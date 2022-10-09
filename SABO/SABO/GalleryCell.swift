@@ -1,5 +1,5 @@
 //
-//  MultiGalleryCell.swift
+//  GalleryCell.swift
 //  SABO
 //
 //  Created by 이재웅 on 2022/10/09.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MultiGalleryCell: View {
+struct GalleryCell: View {
     @Binding var title: String
     @Binding var image: UIImage
     @Binding var userImage: UIImage
@@ -48,9 +48,9 @@ struct MultiGalleryCell: View {
     }
 }
 
-struct MultiGalleryCell_Previews: PreviewProvider {
+struct GalleryCell_Previews: PreviewProvider {
     static var previews: some View {
-        MultiGalleryCell(
+        GalleryCell(
             title: .constant("어쩌고 저쩌고임"),
             image: .constant(UIImage(named: "DummyGalleryImage") ?? UIImage()),
             userImage: .constant(UIImage(named: "DummyProfileImage") ?? UIImage()),
