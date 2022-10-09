@@ -12,7 +12,8 @@
 		16AE96A828F264930074D44B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A728F264930074D44B /* FirebaseFirestore */; };
 		16AE96AA28F264930074D44B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A928F264930074D44B /* FirebaseStorage */; };
 		378D4DE628F26A070094F277 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D4DE528F26A070094F277 /* CardModel.swift */; };
-		378D4DE828F26CC30094F277 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D4DE728F26CC30094F277 /* CardViewModel.swift */; };
+		378D4DEA28F273230094F277 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D4DE928F273230094F277 /* CardViewModel.swift */; };
+		378D4DEE28F276810094F277 /* CardCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D4DED28F276810094F277 /* CardCellModel.swift */; };
 		A378595228F1945100414244 /* SABOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595128F1945100414244 /* SABOApp.swift */; };
 		A378595428F1945100414244 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595328F1945100414244 /* HomeView.swift */; };
 		A378595628F1945200414244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A378595528F1945200414244 /* Assets.xcassets */; };
@@ -25,7 +26,8 @@
 /* Begin PBXFileReference section */
 		16AE96A228F264000074D44B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		378D4DE528F26A070094F277 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
-		378D4DE728F26CC30094F277 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		378D4DE928F273230094F277 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		378D4DED28F276810094F277 /* CardCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellModel.swift; sourceTree = "<group>"; };
 		A378594E28F1945100414244 /* SABO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SABO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A378595128F1945100414244 /* SABOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SABOApp.swift; sourceTree = "<group>"; };
 		A378595328F1945100414244 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				378D4DE528F26A070094F277 /* CardModel.swift */,
+				378D4DED28F276810094F277 /* CardCellModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -68,7 +71,7 @@
 		378D4DE428F269720094F277 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				378D4DE728F26CC30094F277 /* CardViewModel.swift */,
+				378D4DE928F273230094F277 /* CardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -195,12 +198,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A378595428F1945100414244 /* HomeView.swift in Sources */,
+				378D4DEE28F276810094F277 /* CardCellModel.swift in Sources */,
 				A3EB882028F259C300DD965D /* DetailView.swift in Sources */,
 				A378595228F1945100414244 /* SABOApp.swift in Sources */,
 				A3EB882228F25A4E00DD965D /* MainView.swift in Sources */,
+				378D4DEA28F273230094F277 /* CardViewModel.swift in Sources */,
 				A385CBF928F19DED00B289C6 /* SABOModel.swift in Sources */,
 				378D4DE628F26A070094F277 /* CardModel.swift in Sources */,
-				378D4DE828F26CC30094F277 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
