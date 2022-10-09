@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3276D02328F265B7004F7680 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3276D02228F265B7004F7680 /* LoginView.swift */; };
+		16AE96A328F264000074D44B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16AE96A228F264000074D44B /* GoogleService-Info.plist */; };
+		16AE96A628F264930074D44B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A528F264930074D44B /* FirebaseAuth */; };
+		16AE96A828F264930074D44B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A728F264930074D44B /* FirebaseFirestore */; };
+		16AE96AA28F264930074D44B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A928F264930074D44B /* FirebaseStorage */; };
+		16AE96AD28F26EBA0074D44B /* AppleAuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AE96AC28F26EBA0074D44B /* AppleAuthCoordinator.swift */; };
+		378D4DE628F26A070094F277 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D4DE528F26A070094F277 /* CardModel.swift */; };
+		378D4DE828F26CC30094F277 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D4DE728F26CC30094F277 /* CardViewModel.swift */; };
 		A378595228F1945100414244 /* SABOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595128F1945100414244 /* SABOApp.swift */; };
 		A378595428F1945100414244 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595328F1945100414244 /* HomeView.swift */; };
 		A378595628F1945200414244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A378595528F1945200414244 /* Assets.xcassets */; };
@@ -18,6 +26,11 @@
 
 /* Begin PBXFileReference section */
 		A30A15B528F272680056B3E3 /* SABO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SABO.entitlements; sourceTree = "<group>"; };
+		3276D02228F265B7004F7680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		16AE96A228F264000074D44B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		16AE96AC28F26EBA0074D44B /* AppleAuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthCoordinator.swift; sourceTree = "<group>"; };
+		378D4DE528F26A070094F277 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		378D4DE728F26CC30094F277 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		A378594E28F1945100414244 /* SABO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SABO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A378595128F1945100414244 /* SABOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SABOApp.swift; sourceTree = "<group>"; };
 		A378595328F1945100414244 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -33,12 +46,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AE96A628F264930074D44B /* FirebaseAuth in Frameworks */,
+				16AE96A828F264930074D44B /* FirebaseFirestore in Frameworks */,
+				16AE96AA28F264930074D44B /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		378D4DE228F269590094F277 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		378D4DE328F2695E0094F277 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				378D4DE528F26A070094F277 /* CardModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		378D4DE428F269720094F277 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				378D4DE728F26CC30094F277 /* CardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		A378594528F1945100414244 = {
 			isa = PBXGroup;
 			children = (
@@ -59,12 +98,18 @@
 			isa = PBXGroup;
 			children = (
 				A30A15B528F272680056B3E3 /* SABO.entitlements */,
+				378D4DE228F269590094F277 /* Views */,
+				378D4DE428F269720094F277 /* ViewModels */,
+				378D4DE328F2695E0094F277 /* Models */,
 				A378595128F1945100414244 /* SABOApp.swift */,
 				A385CBF828F19DED00B289C6 /* SABOModel.swift */,
 				A378595328F1945100414244 /* HomeView.swift */,
 				A3EB881F28F259C300DD965D /* DetailView.swift */,
 				A3EB882128F25A4E00DD965D /* MainView.swift */,
+				3276D02228F265B7004F7680 /* LoginView.swift */,
+				16AE96AC28F26EBA0074D44B /* AppleAuthCoordinator.swift */,
 				A378595528F1945200414244 /* Assets.xcassets */,
+				16AE96A228F264000074D44B /* GoogleService-Info.plist */,
 				A378595728F1945200414244 /* Preview Content */,
 			);
 			path = SABO;
@@ -94,6 +139,11 @@
 			dependencies = (
 			);
 			name = SABO;
+			packageProductDependencies = (
+				16AE96A528F264930074D44B /* FirebaseAuth */,
+				16AE96A728F264930074D44B /* FirebaseFirestore */,
+				16AE96A928F264930074D44B /* FirebaseStorage */,
+			);
 			productName = SABO;
 			productReference = A378594E28F1945100414244 /* SABO.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +172,9 @@
 				Base,
 			);
 			mainGroup = A378594528F1945100414244;
+			packageReferences = (
+				16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A378594F28F1945100414244 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +191,7 @@
 			files = (
 				A378595928F1945200414244 /* Preview Assets.xcassets in Resources */,
 				A378595628F1945200414244 /* Assets.xcassets in Resources */,
+				16AE96A328F264000074D44B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,11 +202,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3276D02328F265B7004F7680 /* LoginView.swift in Sources */,
 				A378595428F1945100414244 /* HomeView.swift in Sources */,
 				A3EB882028F259C300DD965D /* DetailView.swift in Sources */,
 				A378595228F1945100414244 /* SABOApp.swift in Sources */,
 				A3EB882228F25A4E00DD965D /* MainView.swift in Sources */,
 				A385CBF928F19DED00B289C6 /* SABOModel.swift in Sources */,
+				16AE96AD28F26EBA0074D44B /* AppleAuthCoordinator.swift in Sources */,
+				378D4DE628F26A070094F277 /* CardModel.swift in Sources */,
+				378D4DE828F26CC30094F277 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,10 +338,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SABO/SABO.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SABO/Preview Content\"";
-				DEVELOPMENT_TEAM = UY9DAXUW36;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = UY9DAXUW36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chaam-company.SABO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SABO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,10 +374,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SABO/SABO.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SABO/Preview Content\"";
-				DEVELOPMENT_TEAM = UY9DAXUW36;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = UY9DAXUW36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -333,6 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chaam-company.SABO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SABO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -361,6 +425,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16AE96A528F264930074D44B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		16AE96A728F264930074D44B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		16AE96A928F264930074D44B /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A378594628F1945100414244 /* Project object */;
 }
