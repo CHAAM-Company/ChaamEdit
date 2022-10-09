@@ -25,9 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A30A15B528F272680056B3E3 /* SABO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SABO.entitlements; sourceTree = "<group>"; };
 		3276D02228F265B7004F7680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		16AE96A228F264000074D44B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		16AE96AB28F269810074D44B /* SABO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SABO.entitlements; sourceTree = "<group>"; };
 		16AE96AC28F26EBA0074D44B /* AppleAuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthCoordinator.swift; sourceTree = "<group>"; };
 		378D4DE528F26A070094F277 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		378D4DE728F26CC30094F277 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		A378595028F1945100414244 /* SABO */ = {
 			isa = PBXGroup;
 			children = (
-				16AE96AB28F269810074D44B /* SABO.entitlements */,
+				A30A15B528F272680056B3E3 /* SABO.entitlements */,
 				378D4DE228F269590094F277 /* Views */,
 				378D4DE428F269720094F277 /* ViewModels */,
 				378D4DE328F2695E0094F277 /* Models */,
