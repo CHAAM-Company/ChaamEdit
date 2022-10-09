@@ -10,11 +10,11 @@ import FirebaseAuth
 
 struct MainView: View {
     @EnvironmentObject var cardVM: CardViewModel
+    @EnvironmentObject var userVM: UserViewModel
     
     let firebaseAuth = Auth.auth()
     @State var isSignIn = false
     @State private var showModal = false
-    @StateObject var userVM = UserViewModel()
     
     var body: some View {
         ZStack {
@@ -47,7 +47,8 @@ struct MainView: View {
                     }
                 }
                 .sheet(isPresented: $showModal) {
-                    RegisterView(userVM: userVM, userId: firebaseAuth.currentUser!.uid)
+                    RegisterView(userId: firebaseAuth.currentUser!.uid)
+                        .environmentObject(userVM)
                 }
             } else {
                 LoginView(isSignIn: $isSignIn)

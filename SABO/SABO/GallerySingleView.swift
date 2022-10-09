@@ -6,36 +6,40 @@
 //
 
 import SwiftUI
+import FirebaseStorage
 
 struct GallerySingleView: View {
+    @EnvironmentObject var userVM: UserViewModel
+    
+    var card: CardCell
+    
     @Environment(\.dismiss) var dismiss
+    
+    @State var image: Image = Image("grid")
     var body: some View {
         ZStack{
             VStack(spacing: 20){
-                Image("DummyProfileImage")
+                image
                     .resizable()
                     .scaledToFill()
                     .cornerRadius(16, corners: [.bottomLeft, .bottomRight])
                     .ignoresSafeArea()
                     .frame(height: UIScreen.main.bounds.height/2.3)
                 
-                
-                
-                
-                Text("DOGGGGGGGGGGG")
+                Text(card.title)
                     .font(.title)
                     .bold()
                     .frame(maxWidth: UIScreen.main.bounds.width - 56, alignment: .leading)
                 //                .padding()
                 HStack(spacing: 0) {
-                    Image("DummyProfileImage")
+                    Image(uiImage: (userVM.userProfileImage ?? UIImage(named: "DummyProfileImage"))!)
                         .resizable()
                         .frame(maxWidth: 45, maxHeight: 45)
                         .clipShape(Circle())
                     
                     VStack(alignment: .leading){
-                        Text("Black_Raven")
-                        Text("크리에이터")
+                        Text(userVM.user?.name ?? "")
+                        Text(userVM.user?.description ?? "")
                             .foregroundColor(.gray)
                         
                     }
@@ -51,7 +55,7 @@ struct GallerySingleView: View {
                         .stroke(Color.gray, lineWidth: 0.5)
                 )
                 
-                Text("현재 사진에 사용된 보정봅")
+                Text("현재 사진에 사용된 보정 값")
                     .font(.title2)
                     .bold()
                     .frame(maxWidth: UIScreen.main.bounds.width - 56, alignment: .leading)
@@ -60,22 +64,22 @@ struct GallerySingleView: View {
                     Spacer()
                     VStack{
                         Image("Exposure")
-                        Text("12")
+                        Text("\(card.calibrationValue[0])")
                     }
                     Spacer()
                     VStack{
                         Image("Contrast")
-                        Text("12")
+                        Text("\(card.calibrationValue[1])")
                     }
                     Spacer()
                     VStack{
                         Image("temperature")
-                        Text("12")
+                        Text("\(card.calibrationValue[2])")
                     }
                     Spacer()
                     VStack{
                         Image("saturation")
-                        Text("12")
+                        Text("\(card.calibrationValue[3])")
                     }
                     Spacer()
                 }
@@ -102,12 +106,25 @@ struct GallerySingleView: View {
                 Spacer()
             }
         }.navigationBarHidden(true)
+            .onAppear() {
+                retrieveImage(url: card.fixedImageUrl)
+            }
     }
-}
+    
+    // MARK: - 이미지 다운로드
+    func retrieveImage(url: String) {
+        let storageRef = Storage.storage().reference()
 
-struct GallerySingleView_Previews: PreviewProvider {
-    static var previews: some View {
-        GallerySingleView()
+        let fileRef = storageRef.child(url)
+        fileRef.getData(maxSize: 5 * 640 * 640) { data, error in
+            if error == nil && data != nil {
+                if let image = UIImage(data: data!) {
+                    DispatchQueue.main.async {
+                        self.image = Image(uiImage: image)
+                    }
+                }
+            }
+        }
     }
 }
 

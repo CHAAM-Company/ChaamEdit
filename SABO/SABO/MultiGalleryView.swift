@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MultiGalleryView: View {
     @EnvironmentObject var cardVM: CardViewModel
+    @EnvironmentObject var userVM: UserViewModel
+    
     @State private var searchQueryString = ""
     
     var filteredData: [CardCell] {
@@ -40,8 +42,9 @@ struct MultiGalleryView: View {
                     LazyVGrid(columns: columns) {
                         ForEach(filteredData, id: \.self) { i in
                             ZStack {
-                                GalleryCell(title: i.title, imageUrl: i.resizedFixedImageUrl, userImageUrl: i.creatorProfileImageUrl, cardID: i.creatorId)
+                                GalleryCell(card: i)
                                     .environmentObject(cardVM)
+                                    .environmentObject(userVM)
                             }
                         }
                         .padding()

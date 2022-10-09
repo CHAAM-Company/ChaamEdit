@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @EnvironmentObject var userVM: UserViewModel
+    
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    @ObservedObject var userVM: UserViewModel
     @State var nickName: String = ""
     @State var job: String = ""
     

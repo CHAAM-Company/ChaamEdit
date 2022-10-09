@@ -10,20 +10,27 @@ import FirebaseStorage
 
 struct GalleryCell: View {
     @EnvironmentObject var cardVM: CardViewModel
+    @EnvironmentObject var userVM: UserViewModel
     
-    var title: String
-    var imageUrl: String
-    var userImageUrl: String
-    var cardID: String
+    var card: CardCell
     
     @State var image: Image = Image("grid")
     @State var profileImage: Image = Image("grid")
     
     var body: some View {
+        
         ZStack {
-            image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            NavigationLink(
+                destination: GallerySingleView(card: card)
+                    .environmentObject(userVM)
+                ,
+                label: {
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                })
+            
+            
             
             VStack {
                 Spacer()
@@ -34,7 +41,7 @@ struct GalleryCell: View {
                         startPoint: .bottom,
                         endPoint: .top
                     )
-                        .frame(height: 45.0)
+                    .frame(height: 45.0)
                     
                     HStack() {
                         profileImage
@@ -43,10 +50,10 @@ struct GalleryCell: View {
                             .frame(width: 33.0, height: 33.0)
                             .cornerRadius(16.5)
                         
-                        Text(title)
+                        Text(card.title)
                             .font(.system(size: 12.0, weight: .bold))
                             .lineLimit(1)
-
+                        
                         Spacer()
                     }
                 }
@@ -56,9 +63,10 @@ struct GalleryCell: View {
         .frame(width: 160, height: 160)
         .cornerRadius(16.0)
         .onAppear() {
-            retrieveImage(url: imageUrl, profilUrl: userImageUrl)
+            retrieveImage(url: card.resizedFixedImageUrl, profilUrl: card.creatorProfileImageUrl)
         }
     }
+    
     
     // MARK: - 이미지 다운로드
     func retrieveImage(url: String, profilUrl: String) {
