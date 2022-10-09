@@ -6,16 +6,22 @@
 //
 
 import SwiftUI
+import FirebaseStorage
 
 struct GalleryCell: View {
+    @EnvironmentObject var cardVM: CardViewModel
+    
     var title: String
-    var image: UIImage
-    var userImage: UIImage
+    var imageUrl: String
+    var userImageUrl: String
     var cardID: String
+    
+    @State var image: Image = Image("grid")
+    @State var profileImage: Image = Image("grid")
     
     var body: some View {
         ZStack {
-            Image(uiImage: image)
+            image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             
@@ -31,7 +37,7 @@ struct GalleryCell: View {
                         .frame(height: 45.0)
                     
                     HStack() {
-                        Image(uiImage: userImage)
+                        profileImage
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 33.0, height: 33.0)
@@ -49,16 +55,46 @@ struct GalleryCell: View {
         .redacted(reason: [] == nil ? .placeholder : [])
         .frame(width: 160, height: 160)
         .cornerRadius(16.0)
+        .onAppear() {
+            retrieveImage(url: imageUrl, profilUrl: userImageUrl)
+        }
+    }
+    
+    // MARK: - 이미지 다운로드
+    func retrieveImage(url: String, profilUrl: String) {
+        let storageRef = Storage.storage().reference()
+        
+        let fileRef = storageRef.child(url)
+        fileRef.getData(maxSize: 5 * 640 * 640) { data, error in
+            if error == nil && data != nil {
+                if let image = UIImage(data: data!) {
+                    DispatchQueue.main.async {
+                        self.image = Image(uiImage: image)
+                    }
+                }
+            }
+        }
+        
+        let profileRef = storageRef.child(profilUrl)
+        profileRef.getData(maxSize: 5 * 640 * 640) { data, error in
+            if error == nil && data != nil {
+                if let image = UIImage(data: data!) {
+                    DispatchQueue.main.async {
+                        self.profileImage = Image(uiImage: image)
+                    }
+                }
+            }
+        }
     }
 }
 
-struct GalleryCell_Previews: PreviewProvider {
-    static var previews: some View {
-        GalleryCell(
-            title: "커리가 Async발표할 때",
-            image: UIImage(named: "DummyGalleryImage") ?? UIImage(),
-            userImage: UIImage(named: "DummyProfileImage") ?? UIImage(),
-            cardID: ""
-        )
-    }
-}
+//struct GalleryCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GalleryCell(
+//            title: "커리가 Async발표할 때",
+//            image: UIImage(named: "DummyGalleryImage") ?? UIImage(),
+//            userImage: UIImage(named: "DummyProfileImage") ?? UIImage(),
+//            cardID: ""
+//        )
+//    }
+//}

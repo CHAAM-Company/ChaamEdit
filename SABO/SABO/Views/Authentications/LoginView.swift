@@ -41,8 +41,6 @@ struct LoginView: View {
                 
                 Spacer()
                 
-                Text("로그인 하기")
-                    .bold()
                 
                 AppleLoginButton {
                     isSignIn = true
