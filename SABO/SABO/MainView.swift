@@ -33,7 +33,7 @@ struct MainView: View {
                 }
                 .accentColor(Color("TabColor"))
             } else {
-                LoginView()
+                LoginView(isSignIn: $isSignIn)
             }
         }
         .onAppear {

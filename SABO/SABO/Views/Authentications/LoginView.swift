@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Binding var isSignIn: Bool
+    
     var body: some View {
         ZStack{
             Rectangle()
@@ -43,7 +45,7 @@ struct LoginView: View {
                     .bold()
                 
                 AppleLoginButton {
-                    // 로그인 후 트리거
+                    isSignIn = true
                 }
                 .padding(.bottom, 34)
             }
@@ -53,6 +55,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(.constant(false))
     }
 }
