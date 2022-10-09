@@ -31,6 +31,7 @@ struct MainView: View {
                         .environmentObject(cardVM)
                     UserProfileView()
                         .environmentObject(userVM)
+                        .environmentObject(cardVM)
                         .tabItem {
                             Image(systemName: "person.circle.fill")
                         }
