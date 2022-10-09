@@ -86,10 +86,14 @@ class CardViewModel: ObservableObject {
                                 let cell = CardCell(
                                     id: document.documentID,
                                     time: data["time"] as? Int ?? 0,
-                                    imageUrl: data["resizedFixedImageUrl"] as? String ?? "",
                                     title: data["title"] as? String ?? "",
-                                    profileImageUrl: data["creatorProfileImageUrl"] as? String ?? "",
-                                    creatorId: data["creatorId"] as? String ?? ""
+                                    orginImageUrl: data["orginImageUrl"] as? String ?? "",
+                                    fixedImageUrl: data["fixedImageUrl"] as? String ?? "",
+                                    resizedOrignImageUrl: data["resizedOriginImageUrl"] as? String ?? "",
+                                    resizedFixedImageUrl: data["resizedFixedImageUrl"] as? String ?? "",
+                                    calibrationValue: data["calibrationValues"] as? [Double] ?? [],
+                                    creatorId: data["creatorId"] as? String ?? "",
+                                    creatorProfileImageUrl: data["creatorProfileImageUrl"] as? String ?? ""
                                 )
                                 if cell.time < mainCardGridLastTime {
                                     mainCards.append(cell)
@@ -100,11 +104,52 @@ class CardViewModel: ObservableObject {
             }
     }
     
-//    func fetchUserCardGrid(userId: String) {
-//        let cardsRef = db.collection("cards")
-//
-//
-//    }
+    func fetchUserCardGrid(userId: String) {
+        let cardsRef = db.collection("cards")
+        
+        // 유저 그리드 초기화
+        userCards = []
+
+        cardsRef
+            .order(by: "time", descending: true)
+            .whereField("creatorId", isEqualTo: userId)
+            .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        DispatchQueue.main.async { [self] in
+                            for document in querySnapshot!.documents {
+                                let data = document.data()
+                                let cell = CardCell(
+                                    id: document.documentID,
+                                    time: data["time"] as? Int ?? 0,
+                                    title: data["title"] as? String ?? "",
+                                    orginImageUrl: data["orginImageUrl"] as? String ?? "",
+                                    fixedImageUrl: data["fixedImageUrl"] as? String ?? "",
+                                    resizedOrignImageUrl: data["resizedOriginImageUrl"] as? String ?? "",
+                                    resizedFixedImageUrl: data["resizedFixedImageUrl"] as? String ?? "",
+                                    calibrationValue: data["calibrationValues"] as? [Double] ?? [],
+                                    creatorId: data["creatorId"] as? String ?? "",
+                                    creatorProfileImageUrl: data["creatorProfileImageUrl"] as? String ?? ""
+                                )
+                                userCards.append(cell)
+                            }
+                            print(userCards)
+                        }
+                    }
+            }
+    }
+    
+    //MARK: - 카드 삭제
+    func deleteCard(cardId: String) {
+        db.collection("cards").document(cardId).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+    }
     
     // MARK: - 이미지 업로드 -> 이미지 URL 반환
     func uploadImage(image: UIImage, userId: String, cardId: String, type: String) {
