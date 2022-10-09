@@ -86,9 +86,11 @@ class UserViewModel: ObservableObject {
     }
     
     // 프로필 이미지 다운로드
-    func retrieveProfileImage(url: String) {
+    func retrieveProfileImage(user: User) {
+        guard let path = user.profileImageUrl else { return }
+        
         let storageRef = Storage.storage().reference()
-        let fileRef = storageRef.child(url)
+        let fileRef = storageRef.child(path)
         fileRef.getData(maxSize: 5 * 640 * 640) { data, error in
             if error == nil && data != nil {
                 if let image = UIImage(data: data!) {
