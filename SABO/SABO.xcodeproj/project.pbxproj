@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16AE96A328F264000074D44B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16AE96A228F264000074D44B /* GoogleService-Info.plist */; };
+		16AE96A628F264930074D44B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A528F264930074D44B /* FirebaseAuth */; };
+		16AE96A828F264930074D44B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A728F264930074D44B /* FirebaseFirestore */; };
+		16AE96AA28F264930074D44B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A928F264930074D44B /* FirebaseStorage */; };
 		A378595228F1945100414244 /* SABOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595128F1945100414244 /* SABOApp.swift */; };
 		A378595428F1945100414244 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A378595328F1945100414244 /* HomeView.swift */; };
 		A378595628F1945200414244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A378595528F1945200414244 /* Assets.xcassets */; };
@@ -17,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16AE96A228F264000074D44B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A378594E28F1945100414244 /* SABO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SABO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A378595128F1945100414244 /* SABOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SABOApp.swift; sourceTree = "<group>"; };
 		A378595328F1945100414244 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -32,6 +37,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AE96A628F264930074D44B /* FirebaseAuth in Frameworks */,
+				16AE96A828F264930074D44B /* FirebaseFirestore in Frameworks */,
+				16AE96AA28F264930074D44B /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +71,7 @@
 				A3EB881F28F259C300DD965D /* DetailView.swift */,
 				A3EB882128F25A4E00DD965D /* MainView.swift */,
 				A378595528F1945200414244 /* Assets.xcassets */,
+				16AE96A228F264000074D44B /* GoogleService-Info.plist */,
 				A378595728F1945200414244 /* Preview Content */,
 			);
 			path = SABO;
@@ -92,6 +101,11 @@
 			dependencies = (
 			);
 			name = SABO;
+			packageProductDependencies = (
+				16AE96A528F264930074D44B /* FirebaseAuth */,
+				16AE96A728F264930074D44B /* FirebaseFirestore */,
+				16AE96A928F264930074D44B /* FirebaseStorage */,
+			);
 			productName = SABO;
 			productReference = A378594E28F1945100414244 /* SABO.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +134,9 @@
 				Base,
 			);
 			mainGroup = A378594528F1945100414244;
+			packageReferences = (
+				16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A378594F28F1945100414244 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -136,6 +153,7 @@
 			files = (
 				A378595928F1945200414244 /* Preview Assets.xcassets in Resources */,
 				A378595628F1945200414244 /* Assets.xcassets in Resources */,
+				16AE96A328F264000074D44B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,10 +294,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SABO/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 79Q32HWWTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -307,10 +326,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SABO/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 79Q32HWWTW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -355,6 +375,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16AE96A528F264930074D44B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		16AE96A728F264930074D44B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		16AE96A928F264930074D44B /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AE96A428F264930074D44B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A378594628F1945100414244 /* Project object */;
 }
