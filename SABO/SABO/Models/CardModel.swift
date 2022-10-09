@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 
-struct Card {
+struct Card: Identifiable {
     var id: String
     var createdTime: Date
     var title: String
@@ -17,7 +17,9 @@ struct Card {
     var resizedOrignImageUrl: String
     var resizedFixedImageUrl: String
     var calibrationValue: Calibration
-    var creator: String
+    var creatorId: String
+    var creatorProfileImageUrl: String
+    
 }
 
 struct Calibration: Codable {
