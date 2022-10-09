@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3276D02328F265B7004F7680 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3276D02228F265B7004F7680 /* LoginView.swift */; };
 		16AE96A328F264000074D44B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16AE96A228F264000074D44B /* GoogleService-Info.plist */; };
 		16AE96A628F264930074D44B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A528F264930074D44B /* FirebaseAuth */; };
 		16AE96A828F264930074D44B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 16AE96A728F264930074D44B /* FirebaseFirestore */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3276D02228F265B7004F7680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		16AE96A228F264000074D44B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		16AE96AB28F269810074D44B /* SABO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SABO.entitlements; sourceTree = "<group>"; };
 		16AE96AC28F26EBA0074D44B /* AppleAuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthCoordinator.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				A378595328F1945100414244 /* HomeView.swift */,
 				A3EB881F28F259C300DD965D /* DetailView.swift */,
 				A3EB882128F25A4E00DD965D /* MainView.swift */,
+				3276D02228F265B7004F7680 /* LoginView.swift */,
 				16AE96AC28F26EBA0074D44B /* AppleAuthCoordinator.swift */,
 				A378595528F1945200414244 /* Assets.xcassets */,
 				16AE96A228F264000074D44B /* GoogleService-Info.plist */,
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3276D02328F265B7004F7680 /* LoginView.swift in Sources */,
 				A378595428F1945100414244 /* HomeView.swift in Sources */,
 				A3EB882028F259C300DD965D /* DetailView.swift in Sources */,
 				A378595228F1945100414244 /* SABOApp.swift in Sources */,
