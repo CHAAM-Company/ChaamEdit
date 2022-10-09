@@ -10,29 +10,41 @@ import BrightroomUI
 import BrightroomEngine
 
 struct EditingView: View {
-    //ImageProvider - Test Image
     let editingStack = EditingStack(imageProvider: ImageProvider(image: UIImage(named: "appIcon") ?? UIImage() ))
+    @State var image: UIImage?
     
     var body: some View {
-        VStack {
-            // ✅ Display a cropping view
-            SwiftUICropView(
-                editingStack: editingStack
-            )
-            // ✅ Renders a result image from the current editing.
-            Button("Done") {
-                do {
-                    let image: UIImage = try editingStack.makeRenderer().render().uiImage
-                    print("------이미지 프린트입니다------")
-                    print(image)
-                    print("------이미지 프린트입니다------")
-                } catch {
-                    
-                }
+        NavigationView {
+            VStack {
+                // ✅ Display a cropping view
+                SwiftUIPhotosCropView(
+                    editingStack: editingStack) {
+                        do {
+                            self.image = try editingStack.makeRenderer().render().uiImage
+                            print("------이미지 프린트입니다------")
+                            print(image)
+                            print("------이미지 프린트입니다------")
+                            
+                        } catch {
+
+                        }
+                    } onCancel: {
+                        print("취소됨")
+                    }
+
+                // ✅ Renders a result image from the current editing.
+                
+                NavigationLink(destination: PixelEditView(editingStack: editingStack) ) {
+                    Text("Done")
+                }.simultaneousGesture(
+                    TapGesture().onEnded {
+                        print("abc")
+                    }
+                )
             }
-        }
-        .onAppear {
-            editingStack.start()
+            .onAppear {
+                editingStack.start()
+            }
         }
     }
 }
