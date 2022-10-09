@@ -75,7 +75,7 @@ class UserViewModel: ObservableObject {
         
         guard let data = imageData else { return }
         
-        let path = "images/\(UUID().uuidString).jpeg"
+        let path = "images/users/\(UUID().uuidString).jpeg"
         let fileRef = storageRef.child(path)
         
         _ = fileRef.putData(data, metadata: nil) { meta, error in
