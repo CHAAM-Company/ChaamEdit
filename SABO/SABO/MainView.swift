@@ -9,6 +9,8 @@ import SwiftUI
 import FirebaseAuth
 
 struct MainView: View {
+    @EnvironmentObject var cardVM: CardViewModel
+    
     let firebaseAuth = Auth.auth()
     @State var isSignIn = false
     @State private var showModal = false
@@ -22,10 +24,11 @@ struct MainView: View {
                         .tabItem {
                             Image("house")
                         }
-                    Text("grid")
+                    MultiGalleryView()
                         .tabItem {
                             Image("grid")
                         }
+                        .environmentObject(cardVM)
                     Text("person")
                     
                         .tabItem {

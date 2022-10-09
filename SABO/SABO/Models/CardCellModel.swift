@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct CardCell: Identifiable {
+struct CardCell: Identifiable, Hashable {
     var id: String
     var time: Int
     var title: String

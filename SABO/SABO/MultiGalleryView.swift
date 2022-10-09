@@ -8,18 +8,14 @@
 import SwiftUI
 
 struct MultiGalleryView: View {
-    // Test Data
-    var data = [TestData(title: "커리사진 1", image: UIImage(named: "DummyGalleryImage") ?? UIImage(), userImage: UIImage(named: "DummyProfileImage") ?? UIImage(), cardID: ""),
-                       TestData(title: "카레사진 2", image: UIImage(named: "DummyGalleryImage") ?? UIImage(), userImage: UIImage(named: "DummyProfileImage") ?? UIImage(), cardID: "1"),
-                       TestData(title: "이재웅사진 3", image: UIImage(named: "DummyGalleryImage") ?? UIImage(), userImage: UIImage(named: "DummyProfileImage") ?? UIImage(), cardID: "2")]
-    
+    @EnvironmentObject var cardVM: CardViewModel
     @State private var searchQueryString = ""
     
-    var filteredData: [TestData] {
+    var filteredData: [CardCell] {
         if searchQueryString == "" {
-            return data
+            return cardVM.mainCards
         } else {
-            return data.filter { $0.title.localizedStandardContains(searchQueryString) }
+            return cardVM.mainCards.filter { $0.title.localizedStandardContains(searchQueryString) }
         }
     }
     
@@ -44,7 +40,8 @@ struct MultiGalleryView: View {
                     LazyVGrid(columns: columns) {
                         ForEach(filteredData, id: \.self) { i in
                             ZStack {
-                                GalleryCell(title: i.title, image: i.image, userImage: i.userImage, cardID: i.cardID)
+                                GalleryCell(title: i.title, imageUrl: i.resizedFixedImageUrl, userImageUrl: i.creatorProfileImageUrl, cardID: i.creatorId)
+                                    .environmentObject(cardVM)
                             }
                         }
                         .padding()
@@ -52,6 +49,9 @@ struct MultiGalleryView: View {
                 }
             }
             .padding(.horizontal)
+            .onAppear() {
+                cardVM.fetchMainCardGrid()
+            }
         }
     }
 }

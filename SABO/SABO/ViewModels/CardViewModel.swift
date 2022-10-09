@@ -77,30 +77,30 @@ class CardViewModel: ObservableObject {
             .whereField("time", isLessThan: mainCardGridLastTime)
             .limit(to: 10)
             .getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        DispatchQueue.main.async { [self] in
-                            for document in querySnapshot!.documents {
-                                let data = document.data()
-                                let cell = CardCell(
-                                    id: document.documentID,
-                                    time: data["time"] as? Int ?? 0,
-                                    title: data["title"] as? String ?? "",
-                                    orginImageUrl: data["orginImageUrl"] as? String ?? "",
-                                    fixedImageUrl: data["fixedImageUrl"] as? String ?? "",
-                                    resizedOrignImageUrl: data["resizedOriginImageUrl"] as? String ?? "",
-                                    resizedFixedImageUrl: data["resizedFixedImageUrl"] as? String ?? "",
-                                    calibrationValue: data["calibrationValues"] as? [Double] ?? [],
-                                    creatorId: data["creatorId"] as? String ?? "",
-                                    creatorProfileImageUrl: data["creatorProfileImageUrl"] as? String ?? ""
-                                )
-                                if cell.time < mainCardGridLastTime {
-                                    mainCards.append(cell)
-                                }
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    DispatchQueue.main.async { [self] in
+                        for document in querySnapshot!.documents {
+                            let data = document.data()
+                            let cell = CardCell(
+                                id: document.documentID,
+                                time: data["time"] as? Int ?? 0,
+                                title: data["title"] as? String ?? "",
+                                orginImageUrl: data["orginImageUrl"] as? String ?? "",
+                                fixedImageUrl: data["fixedImageUrl"] as? String ?? "",
+                                resizedOrignImageUrl: data["resizedOriginImageUrl"] as? String ?? "",
+                                resizedFixedImageUrl: data["resizedFixedImageUrl"] as? String ?? "",
+                                calibrationValue: data["calibrationValues"] as? [Double] ?? [],
+                                creatorId: data["creatorId"] as? String ?? "",
+                                creatorProfileImageUrl: data["creatorProfileImageUrl"] as? String ?? ""
+                            )
+                            if cell.time < mainCardGridLastTime {
+                                mainCards.append(cell)
                             }
                         }
                     }
+                }
             }
     }
     
@@ -109,34 +109,34 @@ class CardViewModel: ObservableObject {
         
         // 유저 그리드 초기화
         userCards = []
-
+        
         cardsRef
             .order(by: "time", descending: true)
             .whereField("creatorId", isEqualTo: userId)
             .getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        DispatchQueue.main.async { [self] in
-                            for document in querySnapshot!.documents {
-                                let data = document.data()
-                                let cell = CardCell(
-                                    id: document.documentID,
-                                    time: data["time"] as? Int ?? 0,
-                                    title: data["title"] as? String ?? "",
-                                    orginImageUrl: data["orginImageUrl"] as? String ?? "",
-                                    fixedImageUrl: data["fixedImageUrl"] as? String ?? "",
-                                    resizedOrignImageUrl: data["resizedOriginImageUrl"] as? String ?? "",
-                                    resizedFixedImageUrl: data["resizedFixedImageUrl"] as? String ?? "",
-                                    calibrationValue: data["calibrationValues"] as? [Double] ?? [],
-                                    creatorId: data["creatorId"] as? String ?? "",
-                                    creatorProfileImageUrl: data["creatorProfileImageUrl"] as? String ?? ""
-                                )
-                                userCards.append(cell)
-                            }
-                            print(userCards)
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    DispatchQueue.main.async { [self] in
+                        for document in querySnapshot!.documents {
+                            let data = document.data()
+                            let cell = CardCell(
+                                id: document.documentID,
+                                time: data["time"] as? Int ?? 0,
+                                title: data["title"] as? String ?? "",
+                                orginImageUrl: data["orginImageUrl"] as? String ?? "",
+                                fixedImageUrl: data["fixedImageUrl"] as? String ?? "",
+                                resizedOrignImageUrl: data["resizedOriginImageUrl"] as? String ?? "",
+                                resizedFixedImageUrl: data["resizedFixedImageUrl"] as? String ?? "",
+                                calibrationValue: data["calibrationValues"] as? [Double] ?? [],
+                                creatorId: data["creatorId"] as? String ?? "",
+                                creatorProfileImageUrl: data["creatorProfileImageUrl"] as? String ?? ""
+                            )
+                            userCards.append(cell)
                         }
+                        print(userCards)
                     }
+                }
             }
     }
     

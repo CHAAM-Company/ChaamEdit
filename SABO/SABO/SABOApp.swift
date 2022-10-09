@@ -20,10 +20,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct SABOApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var cardVM = CardViewModel()
     
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(cardVM)
         }
     }
 }
