@@ -10,64 +10,48 @@ import UIKit
 import SwiftUI
 import PhotosUI
 
+import SwiftUI
+
 struct PhotoPickerView: UIViewControllerRepresentable {
     
-    typealias UIViewControllerType = PHPickerViewController
+    @Environment(\.presentationMode) private var presentationMode
     
-    @Binding var image : UIImage?
+    @Binding var selectedImage: UIImage
     
-    func makeUIViewController(context: Context) -> UIViewControllerType {
-        var config = PHPickerConfiguration()
-        config.selectionLimit = 1
-        config.filter = PHPickerFilter.images
+    var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    
+    func makeUIViewController(context: Context) -> some UIViewController {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = sourceType
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = context.coordinator
         
-        let viewController = PHPickerViewController(configuration: config)
-        viewController.delegate = context.coordinator
-        return viewController
+        return imagePicker
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
     }
     
-    func makeCoordinator() -> PhotoPickerView.Coordinator {
-        return Coordinator(self)
-    }
-}
-
-extension PhotoPickerView {
-    
-    class Coordinator: NSObject,
-                       PHPickerViewControllerDelegate {
-        private let window: UIWindow
+    final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+        
         var parent: PhotoPickerView
         
         init(_ parent: PhotoPickerView) {
             self.parent = parent
-            self.window = UIWindow()
         }
         
-        func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-            picker.dismiss(animated: true)
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             
-            guard let result = results.first else {
-                return
+            if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+                parent.selectedImage = image
             }
-
-            result.itemProvider.loadObject(ofClass: UIImage.self) { object, error in
-                if let error = error {
-                    print("Photo picker error: \(error)")
-                    return
-                }
-
-                guard let photo = object as? UIImage else {
-                    fatalError("The Photo Picker's image isn't a/n \(UIImage.self) instance.")
-                }
-                
-                self.parent.image = photo
-            }
+            
+            parent.presentationMode.wrappedValue.dismiss()
         }
-        
-        
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
     }
 }

@@ -9,13 +9,13 @@ import SwiftUI
 import PhotosUI
 
 struct UserAvatarView: View {
-    let myProfileImage: UIImage
-    @State var newImg: UIImage?
+    @EnvironmentObject var userVM: UserViewModel
+    @State var newImg: UIImage = UIImage()
     @State var isPickerPressed = false
     
     var body: some View {
         
-        Image(uiImage: myProfileImage)
+        Image(uiImage: userVM.userProfileImage ?? UIImage(named: "grid")!)
             .resizable()
             .scaledToFit()
             .frame(width: 100, height: 100)
@@ -38,14 +38,10 @@ struct UserAvatarView: View {
                     }
             )
             .fullScreenCover(isPresented: $isPickerPressed) {
-                PhotoPickerView(image: $newImg)
+                PhotoPickerView(selectedImage: $newImg)
+                    .onDisappear {
+                        userVM.uploadProfileImage(image: newImg)
+                    }
             }
-        
-    }
-}
-
-struct UserAvatarView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserAvatarView(myProfileImage: UIImage(named: "grid")!)
     }
 }

@@ -8,20 +8,14 @@
 import SwiftUI
 
 struct UserProfileView: View {
-    let myProfileImage: UIImage
-    let myName: String
-    let myJob: String
+    @EnvironmentObject var userVM: UserViewModel
     
     var body: some View {
         VStack() {
-            UserInformationView(myProfileImage: myProfileImage,myName: myName, myJob: myJob)
+            UserInformationView()
+                .environmentObject(userVM)
             UserPostGalleryView()
-        }.padding(.top)
-    }
-}
-
-struct UserProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserProfileView(myProfileImage: UIImage(named: "grid")!, myName: "", myJob: "")
+        }
+        .padding(.top)
     }
 }
