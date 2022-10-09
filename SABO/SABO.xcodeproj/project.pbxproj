@@ -29,6 +29,8 @@
 		5525613428F272CC00AD350D /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525613328F272CC00AD350D /* GalleryCell.swift */; };
 		5525613628F27B0200AD350D /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525613528F27B0200AD350D /* Color+.swift */; };
 		5525613828F29E0A00AD350D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525613728F29E0A00AD350D /* SearchBar.swift */; };
+		5525614928F2D99F00AD350D /* EditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525614828F2D99F00AD350D /* EditingView.swift */; };
+		5525614B28F2DC0000AD350D /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525614A28F2DC0000AD350D /* ControlView.swift */; };
 		978A6D7028F2D4F7001FD184 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978A6D6128F2D4F7001FD184 /* UserProfileView.swift */; };
 		978A6D7128F2D4F7001FD184 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978A6D6428F2D4F7001FD184 /* UserInformationView.swift */; };
 		978A6D7228F2D4F7001FD184 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978A6D6628F2D4F7001FD184 /* UserDetailView.swift */; };
@@ -66,6 +68,8 @@
 		5525613328F272CC00AD350D /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 		5525613528F27B0200AD350D /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		5525613728F29E0A00AD350D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		5525614828F2D99F00AD350D /* EditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingView.swift; sourceTree = "<group>"; };
+		5525614A28F2DC0000AD350D /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		978A6D6128F2D4F7001FD184 /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		978A6D6428F2D4F7001FD184 /* UserInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
 		978A6D6628F2D4F7001FD184 /* UserDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 				5525613128F26AA600AD350D /* MultiGalleryView.swift */,
 				5525613328F272CC00AD350D /* GalleryCell.swift */,
 				5525613728F29E0A00AD350D /* SearchBar.swift */,
+				5525614828F2D99F00AD350D /* EditingView.swift */,
+				5525614A28F2DC0000AD350D /* ControlView.swift */,
 				3248E26528F2C67E00820404 /* GallerySingleView.swift */,
 				A378595528F1945200414244 /* Assets.xcassets */,
 				16AE96A228F264000074D44B /* GoogleService-Info.plist */,
@@ -355,6 +361,7 @@
 				3276D02328F265B7004F7680 /* LoginView.swift in Sources */,
 				1666776C28F27E2500323C22 /* UserViewModel.swift in Sources */,
 				A378595428F1945100414244 /* HomeView.swift in Sources */,
+				5525614928F2D99F00AD350D /* EditingView.swift in Sources */,
 				978A6D7328F2D4F7001FD184 /* UserAvatarView.swift in Sources */,
 				378D4DEE28F276810094F277 /* CardCellModel.swift in Sources */,
 				978A6D7728F2D4F7001FD184 /* UserPostGalleryView.swift in Sources */,
@@ -369,6 +376,7 @@
 				978A6D7428F2D4F7001FD184 /* UserPostTitleView.swift in Sources */,
 				978A6D7128F2D4F7001FD184 /* UserInformationView.swift in Sources */,
 				A3EB882228F25A4E00DD965D /* MainView.swift in Sources */,
+				5525614B28F2DC0000AD350D /* ControlView.swift in Sources */,
 				378D4DEA28F273230094F277 /* CardViewModel.swift in Sources */,
 				3248E26628F2C67E00820404 /* GallerySingleView.swift in Sources */,
 				978A6D7528F2D4F7001FD184 /* UserPostGalleryTitleView.swift in Sources */,
