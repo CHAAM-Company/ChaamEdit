@@ -23,7 +23,7 @@ struct SABOApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            MainView()
         }
     }
 }
