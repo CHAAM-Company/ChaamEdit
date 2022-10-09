@@ -12,7 +12,15 @@ struct MainView: View {
         TabView {
             HomeView()
                 .tabItem {
-                    Image(systemName: "")
+                    Image("house")
+                }
+            Text("grid")
+                .tabItem {
+                    Image("grid")
+                }
+            Text("person")
+                .tabItem {
+                    Image(systemName: "person.circle.fill")
                 }
         }
     }
