@@ -9,7 +9,9 @@ import SwiftUI
 
 struct MultiGalleryView: View {
     // Test Data
-    let data = Array(1...8).map { "목록 \($0)"}
+    @State var data = [TestData(title: "저쩌고임", image: UIImage(named: "DummyGalleryImage") ?? UIImage(), userImage: UIImage(named: "DummyProfileImage") ?? UIImage(), cardID: ""),
+                       TestData(title: "저쩌고임", image: UIImage(named: "DummyGalleryImage") ?? UIImage(), userImage: UIImage(named: "DummyProfileImage") ?? UIImage(), cardID: "1"),
+                       TestData(title: "저쩌고임", image: UIImage(named: "DummyGalleryImage") ?? UIImage(), userImage: UIImage(named: "DummyProfileImage") ?? UIImage(), cardID: "2")]
     
     let columns = [
         GridItem(.adaptive(minimum: 160)),
@@ -28,29 +30,31 @@ struct MultiGalleryView: View {
                         .padding(.horizontal)
                     
                     LazyVGrid(columns: columns) {
-                        ForEach(data, id: \.self) { i in
+                        ForEach($data, id: \.self) { i in
                             ZStack {
-                                //TODO: MultiGalleryRow로 구현 후 변경필요
-                                Rectangle()
-                                    .fill(Color.yellow)
-                                    .frame(height: 170.0)
-                                VStack {
-                                    Spacer()
-                                    Text(i)
-                                }
+                                GalleryCell(title: i.title, image: i.image, userImage: i.userImage, cardID: i.cardID)
                             }
-                            .padding()
                         }
+                        .padding()
                     }
                 }
-                .padding(.horizontal)
             }
+            .padding(.horizontal)
         }
     }
 }
+
 
 struct MultiGalleryView_Previews: PreviewProvider {
     static var previews: some View {
         MultiGalleryView()
     }
+}
+
+// Test Struct
+struct TestData: Hashable {
+    var title: String
+    var image: UIImage
+    var userImage: UIImage
+    var cardID: String
 }
