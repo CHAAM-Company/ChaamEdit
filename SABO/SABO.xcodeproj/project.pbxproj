@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3248E25328F2989D00820404 /* LoopingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3248E25228F2989D00820404 /* LoopingPlayer.swift */; };
+		3248E25928F298E600820404 /* exposure.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3248E25528F298E600820404 /* exposure.mp4 */; };
+		3248E25A28F298E600820404 /* contrast.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3248E25628F298E600820404 /* contrast.mp4 */; };
+		3248E25C28F298E600820404 /* whiteBlalance.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3248E25828F298E600820404 /* whiteBlalance.mp4 */; };
+		3248E25E28F2A62A00820404 /* saturation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3248E25D28F2A62A00820404 /* saturation.mp4 */; };
 		1666776828F2793D00323C22 /* AppleLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666776728F2793D00323C22 /* AppleLoginButton.swift */; };
 		1666776A28F27D9500323C22 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666776928F27D9500323C22 /* UserModel.swift */; };
 		1666776C28F27E2500323C22 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666776B28F27E2500323C22 /* UserViewModel.swift */; };
@@ -33,6 +38,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3248E25228F2989D00820404 /* LoopingPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingPlayer.swift; sourceTree = "<group>"; };
+		3248E25528F298E600820404 /* exposure.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = exposure.mp4; sourceTree = "<group>"; };
+		3248E25628F298E600820404 /* contrast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = contrast.mp4; sourceTree = "<group>"; };
+		3248E25828F298E600820404 /* whiteBlalance.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = whiteBlalance.mp4; sourceTree = "<group>"; };
+		3248E25D28F2A62A00820404 /* saturation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = saturation.mp4; sourceTree = "<group>"; };
 		1666776728F2793D00323C22 /* AppleLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginButton.swift; sourceTree = "<group>"; };
 		1666776928F27D9500323C22 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1666776B28F27E2500323C22 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -71,6 +81,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3248E25428F298D100820404 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				3248E25628F298E600820404 /* contrast.mp4 */,
+				3248E25528F298E600820404 /* exposure.mp4 */,
+				3248E25828F298E600820404 /* whiteBlalance.mp4 */,
+				3248E25D28F2A62A00820404 /* saturation.mp4 */,
+			);
+			path = Videos;
+            sourceTree = "<group>";
+        };
 		16AE96AF28F276A40074D44B /* Authentications */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +148,7 @@
 		A378595028F1945100414244 /* SABO */ = {
 			isa = PBXGroup;
 			children = (
+				3248E25428F298D100820404 /* Videos */,
 				A30A15B528F272680056B3E3 /* SABO.entitlements */,
 				378D4DE228F269590094F277 /* Views */,
 				378D4DE428F269720094F277 /* ViewModels */,
@@ -137,6 +159,7 @@
 				5525613528F27B0200AD350D /* Color+.swift */,
 				A3EB881F28F259C300DD965D /* DetailView.swift */,
 				A3EB882128F25A4E00DD965D /* MainView.swift */,
+				3248E25228F2989D00820404 /* LoopingPlayer.swift */,
 				5525613128F26AA600AD350D /* MultiGalleryView.swift */,
 				5525613328F272CC00AD350D /* GalleryCell.swift */,
 				5525613728F29E0A00AD350D /* SearchBar.swift */,
@@ -197,10 +220,10 @@
 			};
 			buildConfigurationList = A378594928F1945100414244 /* Build configuration list for PBXProject "SABO" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
+				ko,
 				Base,
 			);
 			mainGroup = A378594528F1945100414244;
@@ -222,7 +245,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A378595928F1945200414244 /* Preview Assets.xcassets in Resources */,
+				3248E25E28F2A62A00820404 /* saturation.mp4 in Resources */,
+				3248E25A28F298E600820404 /* contrast.mp4 in Resources */,
 				A378595628F1945200414244 /* Assets.xcassets in Resources */,
+				3248E25928F298E600820404 /* exposure.mp4 in Resources */,
+				3248E25C28F298E600820404 /* whiteBlalance.mp4 in Resources */,
 				16AE96A328F264000074D44B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +275,7 @@
 				378D4DEA28F273230094F277 /* CardViewModel.swift in Sources */,
 				5525613428F272CC00AD350D /* GalleryCell.swift in Sources */,
 				A385CBF928F19DED00B289C6 /* SABOModel.swift in Sources */,
+				3248E25328F2989D00820404 /* LoopingPlayer.swift in Sources */,
 				1666776828F2793D00323C22 /* AppleLoginButton.swift in Sources */,
 				16AE96AD28F26EBA0074D44B /* AppleAuthCoordinator.swift in Sources */,
 				1666776A28F27D9500323C22 /* UserModel.swift in Sources */,
@@ -378,10 +406,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SABO/SABO.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SABO/Preview Content\"";
+				DEVELOPMENT_TEAM = UY9DAXUW36;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = UY9DAXUW36;
 				ENABLE_PREVIEWS = YES;
@@ -389,8 +419,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -400,10 +430,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chaam-company.SABO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SABO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -414,10 +447,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SABO/SABO.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SABO/Preview Content\"";
+				DEVELOPMENT_TEAM = UY9DAXUW36;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = UY9DAXUW36;
 				ENABLE_PREVIEWS = YES;
@@ -425,8 +460,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -436,10 +471,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chaam-company.SABO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = SABO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
