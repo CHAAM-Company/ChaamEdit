@@ -24,6 +24,7 @@ struct EditingView: View {
     @State var saturationValue: Int = 0
     
     @State var editedSetting = ""
+    @State var titleName = ""
     
     
     @Binding var image: UIImage
@@ -92,10 +93,12 @@ struct EditingView: View {
             
             HStack {
                 Spacer()
+                TextField("제목을 입력하세요", text : $titleName) //$표시 필수
+                Spacer()
                 
                 Button {
                     // 등록하기 기능
-                    cardVM.addCardData(title: "성공적인 색 보정 인가요?", originImage: image, fixedImage: image,
+                    cardVM.addCardData(title: "\(titleName)", originImage: image, fixedImage: image,
                                        calibrationValues: [Int(exposureValue), Int(contrastValue), Int(temperatureValue), Int(saturationValue)],
                                        userId: userVM.user?.id ?? "", userProfileImageUrl: userVM.user?.profileImageUrl ?? "")
                     dismiss()

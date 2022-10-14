@@ -50,7 +50,7 @@ struct GalleryCell: View {
                             .frame(width: 33.0, height: 33.0)
                             .cornerRadius(16.5)
                         
-                        Text(userVM.user?.name ?? "")
+                        Text(card.title)
                             .font(.system(size: 12.0, weight: .bold))
                             .lineLimit(1)
                         
