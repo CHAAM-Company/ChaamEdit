@@ -17,25 +17,31 @@ struct UserPostGalleryView: View {
         GridItem(.adaptive(minimum: 160))
     ]
     
+    var filteredData: [CardCell] {
+        return cardVM.mainCards.filter { i in
+            i.creatorId == userVM.user?.id
+        }
+    }
+    
     var body: some View {
         VStack {
             UserPostTitleView()
                 .environmentObject(cardVM)
                 .environmentObject(userVM)
             NavigationView {
-                  ScrollView {
-                      VStack(alignment: .leading) {
-                          LazyVGrid(columns: columns) {
-                              ForEach(cardVM.userCards, id: \.self) { i in
-                                  ZStack {
-                                      GalleryCell(card: i)
-                                  }
-                              }
-                              
-                          }
-                      }
-                  }
-              }
+                ScrollView {
+                    VStack(alignment: .leading) {
+                        LazyVGrid(columns: columns) {
+                            ForEach(filteredData, id: \.self) { i in
+                                ZStack {
+                                    GalleryCell(card: i)
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
         }
     }
 }
