@@ -43,6 +43,9 @@ struct UserPostGalleryView: View {
                 }
             }
         }
+        .onAppear() {
+            cardVM.fetchMainCardGrid()
+        }
     }
 }
 
