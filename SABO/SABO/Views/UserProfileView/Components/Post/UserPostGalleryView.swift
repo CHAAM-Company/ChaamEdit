@@ -11,7 +11,7 @@ import SwiftUI
 struct UserPostGalleryView: View {
     @EnvironmentObject var cardVM: CardViewModel
     @EnvironmentObject var userVM: UserViewModel
-    
+        
     let columns = [
         GridItem(.adaptive(minimum: 160)),
         GridItem(.adaptive(minimum: 160))
@@ -34,7 +34,7 @@ struct UserPostGalleryView: View {
                         LazyVGrid(columns: columns) {
                             ForEach(filteredData, id: \.self) { i in
                                 ZStack {
-                                    GalleryCell(card: i)
+                                    GalleryCell(card: i, isUser: true)
                                 }
                             }
                             

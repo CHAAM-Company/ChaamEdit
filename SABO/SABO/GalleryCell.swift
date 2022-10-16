@@ -13,6 +13,7 @@ struct GalleryCell: View {
     @EnvironmentObject var userVM: UserViewModel
     
     var card: CardCell
+    var isUser = false
     
     @State var image: Image = Image("grid")
     @State var profileImage: Image = Image("grid")
@@ -20,18 +21,21 @@ struct GalleryCell: View {
     var body: some View {
         
         ZStack {
-            NavigationLink(
-                destination: GallerySingleView(card: card)
-                    .environmentObject(userVM)
-                ,
-                label: {
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                })
-            
-            
-            
+            if !isUser {
+                NavigationLink(
+                    destination: GallerySingleView(card: card)
+                        .environmentObject(userVM)
+                    ,
+                    label: {
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    })
+            } else {
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
             VStack {
                 Spacer()
                 
@@ -59,7 +63,7 @@ struct GalleryCell: View {
                 }
             }
         }
-        .redacted(reason: [] == nil ? .placeholder : [])
+        .redacted(reason: [])
         .frame(width: 160, height: 160)
         .cornerRadius(16.0)
         .onAppear() {
